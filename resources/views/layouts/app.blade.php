@@ -1,36 +1,102 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dapur Marani</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <style>
+    /* Custom Navbar Styles */
+    .navbar {
+      padding: 15px 30px; /* Mengatur padding navbar */
+      background-color: #343a40; /* Warna navbar */
+    }
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+    /* Logo Styles - Membuat logo bulat dan teratur */
+    .navbar-brand img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    /* Styling untuk nav links */
+    .nav-link {
+      font-size: 18px; /* Ukuran font lebih besar */
+      font-weight: 600;
+      color: #fff !important;
+      transition: all 0.3s ease-in-out;
+      letter-spacing: 1px; /* Jarak antar huruf untuk tampilan lebih rapi */
+      padding: 10px 15px; /* Memberikan ruang pada menu */
+    }
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+    /* Hover effect untuk menu */
+    .nav-link:hover {
+      color: #f39c12 !important; /* Warna saat hover */
+      background-color: rgba(243, 156, 18, 0.1); /* Memberikan background saat hover */
+      border-radius: 5px;
+    }
 
-            <!-- Page Heading -->
-            @isset($header)
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endisset
+    /* Navbar Toggler Icon */
+    .navbar-toggler-icon {
+      background-color: #f39c12; /* Warna icon toggler */
+    }
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-    </body>
+    /* Menyesuaikan jarak navbar-nav */
+    .navbar-nav {
+      margin-left: auto;
+    }
+
+    /* Styling untuk menu yang aktif */
+    .nav-link.active {
+      color: #f39c12 !important;
+      font-weight: 700;
+      border-bottom: 2px solid #f39c12; /* Menambahkan garis bawah untuk link aktif */
+    }
+
+    /* Menambah jarak antar menu */
+    .navbar-nav .nav-item {
+      margin-left: 25px;
+    }
+
+    /* Responsif untuk navbar */
+    @media (max-width: 991px) {
+      .navbar-nav .nav-item {
+        margin-left: 15px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  {{-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="{{ asset('build/assets/logo.jpg')}}" alt="Dapur Marani">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div> --}}
+  </nav>
+
+  @yield('content')
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
