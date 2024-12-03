@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
 
+Route::resource('menu', MenuController::class);
 
 Route::get('/', function () {
     return view('welcome');
@@ -12,9 +14,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/menu', function () {
-    return view('menu');
-});
+Route::get('/menus', [MenuController::class, 'index'])->name('menus.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

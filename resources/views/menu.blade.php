@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
 
@@ -264,4 +264,89 @@ footer p {
 
 
 
-    .menu-item
+    .menu-item --}}
+
+
+<!-- resources/views/menu.blade.php -->
+
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <h2>Daftar Menu</h2>
+    <!-- Tombol untuk Tambah Menu -->
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createMenuModal">Tambah Menu</button>
+
+    <!-- Tabel Daftar Menu -->
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nama Menu</th>
+                <th>Gambar</th>
+                <th>Deskripsi</th>
+                <th>Harga</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Daftar menu akan ditampilkan di sini -->
+            @foreach ($menus as $menu)
+            <tr>
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $menu->nama }}</td>
+                <td><img src="{{ asset('blade/images/' . $menu->gambar) }}" alt="{{ $menu->nama }}" width="50"></td>
+                <td>{{ $menu->deskripsi }}</td>
+                <td>{{ $menu->harga }}</td>
+                <td>
+                    <!-- Aksi Edit dan Hapus -->
+                    <a href="{{ route('menu.edit', $menu->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                    <form action="{{ route('menu.destroy', $menu->id) }}" method="POST" class="d-inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal untuk Tambah atau Edit Menu -->
+<div class="modal fade" id="createMenuModal" tabindex="-1" aria-labelledby="createMenuModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="{{ route('menu.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createMenuModalLabel">Tambah Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nama" class="form-label">Nama Menu</label>
+                        <input type="text" class="form-control" id="nama" name="nama" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="gambar" class="form-label">Gambar Menu</label>
+                        <input type="file" class="form-control" id="gambar" name="gambar" accept="image/*" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="deskripsi" class="form-label">Deskripsi</label>
+                        <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="harga" class="form-label">Harga</label>
+                        <input type="number" class="form-control" id="harga" name="harga" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@endsection
