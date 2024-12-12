@@ -1,29 +1,45 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h1>Edit Menu</h1>
+<div class="container py-5">
+    <h1 class="text-center text-2xl font-semibold mb-6">Edit Menu</h1>
     <form action="{{ route('menu.update', $menu->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
-        <div class="form-group">
-            <label for="nama">Nama Menu</label>
-            <input type="text" class="form-control" id="nama" name="nama" value="{{ $menu->nama }}" required>
+
+        <!-- Nama Menu -->
+        <div class="form-group mb-4">
+            <label for="nama" class="block text-lg font-semibold text-gray-700">Nama Menu</label>
+            <input type="text" class="form-control w-full p-3 border border-gray-300 rounded-lg" id="nama" name="nama" value="{{ old('nama', $menu->nama) }}" required>
         </div>
-        <div class="form-group">
-            <label for="gambar">Gambar Menu</label>
-            <input type="file" class="form-control" id="gambar" name="gambar">
-            <img src="{{ asset('storage/'.$menu->gambar) }}" width="100" alt="{{ $menu->nama }}">
+
+        <!-- Gambar Menu -->
+        <div class="form-group mb-4">
+            <label for="gambar" class="block text-lg font-semibold text-gray-700">Gambar Menu</label>
+            <div class="mb-3">
+                @if($menu->gambar)
+                    <img src="{{ asset('storage/'.$menu->gambar) }}" width="100" alt="{{ $menu->nama }}" class="rounded">
+                @endif
+            </div>
+            <input type="file" class="form-control w-full p-3 border border-gray-300 rounded-lg" id="gambar" name="gambar">
         </div>
-        <div class="form-group">
-            <label for="deskripsi">Deskripsi Menu</label>
-            <textarea class="form-control" id="deskripsi" name="deskripsi" required>{{ $menu->deskripsi }}</textarea>
+
+        <!-- Deskripsi Menu -->
+        <div class="form-group mb-4">
+            <label for="deskripsi" class="block text-lg font-semibold text-gray-700">Deskripsi Menu</label>
+            <textarea class="form-control w-full p-3 border border-gray-300 rounded-lg" id="deskripsi" name="deskripsi" rows="4" required>{{ old('deskripsi', $menu->deskripsi) }}</textarea>
         </div>
-        <div class="form-group">
-            <label for="harga">Harga Menu</label>
-            <input type="number" class="form-control" id="harga" name="harga" value="{{ $menu->harga }}" required>
+
+        <!-- Harga Menu -->
+        <div class="form-group mb-4">
+            <label for="harga" class="block text-lg font-semibold text-gray-700">Harga Menu</label>
+            <input type="number" class="form-control w-full p-3 border border-gray-300 rounded-lg" id="harga" name="harga" value="{{ old('harga', $menu->harga) }}" required>
         </div>
-        <button type="submit" class="btn btn-primary">Simpan</button>
+
+        <!-- Button Simpan -->
+        <div class="form-group text-right">
+            <button type="submit" class="btn btn-primary px-6 py-2 rounded-lg">Simpan</button>
+        </div>
     </form>
 </div>
 @endsection

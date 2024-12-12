@@ -1,3 +1,4 @@
+{{-- untuk definisikan struktur html --}}
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
   <style>
     /* Custom Navbar Styles */
     .navbar {
@@ -68,19 +70,26 @@
       }
     }
 
+    /* Styling background untuk body */
+    body {
+      background-color: #f5f5f5; /* Warna latar belakang abu muda */
+      color: #333; /* Menyesuaikan warna teks agar kontras dengan latar belakang */
+    }
   </style>
 </head>
+
 <body>
-  {{-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  {{-- Navbar --}}
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="{{ asset('build/assets/logo.jpg')}}" alt="Dapur Marani">
+        <img src="{{ asset('build/assets/logo.jpg') }}" alt="Dapur Marani">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link active" href="#">Home</a>
           </li>
@@ -92,9 +101,10 @@
           </li>
         </ul>
       </div>
-    </div> --}}
+    </div>
   </nav>
 
+  {{-- Konten utama --}}
   @yield('content')
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

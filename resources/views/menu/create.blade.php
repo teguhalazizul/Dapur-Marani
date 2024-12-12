@@ -25,3 +25,6 @@
     </form>
 </div>
 @endsection
+
+
+{{-- lalu definisikan struktur html pada layout app.blade --}}

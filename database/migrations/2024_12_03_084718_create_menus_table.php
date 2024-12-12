@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations. tambahkan struktur tabel. setelah itu php artisan migrate setlah itu buat di terminal php artisan make:model Menu
+
      */
     public function up(): void
     {

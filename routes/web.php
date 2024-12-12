@@ -10,11 +10,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Menggabungkan kedua route yang bertentangan
 Route::get('/about', function () {
     return view('about');
 });
 
 Route::get('/menus', [MenuController::class, 'index'])->name('menus.index');
+
+// Menghapus route yang bertentangan dan menjaga route homepage
+Route::get('/homepage', function () {
+    return view('index');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

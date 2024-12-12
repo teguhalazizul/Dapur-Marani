@@ -11,6 +11,7 @@ class MenuController extends Controller
     {
         // Menampilkan daftar menu
         $menus = Menu::all();
+
         return view('menu.index', compact('menus'));
     }
 
@@ -85,3 +86,5 @@ class MenuController extends Controller
         return redirect()->route('menu.index')->with('success', 'Menu berhasil dihapus');
     }
 }
+
+// lalu tambahkan route nya ke web.php
