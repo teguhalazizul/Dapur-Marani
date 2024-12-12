@@ -27,7 +27,7 @@
         <div class="flex h-16 items-center justify-between">
           <div class="flex-1 md:flex md:items-center md:gap-12">
             <a class="inline-block text-teal-700" href="#" id="logo">
-              <span class="font-bold text-xl">TriHita Vegan</span>
+              <span class="font-bold text-xl">Dapur Marani</span>
             </a>
           </div>
 
