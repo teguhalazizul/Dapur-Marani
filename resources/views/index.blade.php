@@ -27,7 +27,7 @@
         <div class="flex h-16 items-center justify-between">
           <div class="flex-1 md:flex md:items-center md:gap-12">
             <a class="inline-block text-teal-700" href="#" id="logo">
-              <span class="font-bold text-xl">TriHita Vegan</span>
+              <span class="font-bold text-xl">Dapur Marani</span>
             </a>
           </div>
 
@@ -39,7 +39,7 @@
                 </li>
 
                 <li>
-                  <a class="link" href="#about"> Tentang Kami </a>
+                  <a class="link" href="#about"> About Us </a>
                 </li>
 
                 <li>
@@ -279,7 +279,7 @@
               <h1
                 class="text-4xl md:text-3xl capitalize text-neutral-800 leading-tight lg:leading-[4rem]"
               >
-                Nikmatin makanan <span class="text-teal-600">sehat</span> tanpa
+                Nikmatin makanan <span class="text-teal-600">Nikmat</span> tanpa
                 harus ribet dan
                 <span class="decoration-red-600 underline decoration-wavy"
                   >mahal</span
@@ -301,7 +301,7 @@
               <p
                 class="font-normal text-sm text-gray-500 font-inter leading-normal md:leading-relaxed"
               >
-                Cobain nih makanan sehat yang enak dan murah meriah banget! Menu
+                Cobain nih makanan yang enak dan murah meriah banget! Menu
                 pilihan spesial buat kamu yang mau makan enak tapi tetep sehat,
                 dan yang pasti ga bikin kantong bolong. Rasain deh kelezatan
                 yang bikin badan sehat dan lidah senang, tanpa harus nguras isi
@@ -360,7 +360,7 @@
           >
             <div class="space-y-3">
               <h1 class="text-3xl md:text-2xl lg:text-3xl text-emerald-900">
-                TriHita Vegan
+                Dapur Marani
               </h1>
               <p class="text-base text-neutral-500 font-medium font-inter">
                 Yuk kenalan singkat sama kami, disini kamu akan tau sejarah,
@@ -379,7 +379,7 @@
               <p
                 class="text-sm font-normal text-neutral-500 font-inter leading-relaxed"
               >
-                Jadi, Tri Hita Vegan itu bukan cuma bisnis biasa, lhoo
+                Jadi, Dapur Marani itu bukan cuma bisnis biasa, lhoo
                 temen-temen! Awalnya, mereka memulai dengan minimarket yang
                 khusus jual bahan-bahan vegan. Nah, tapi nggak berhenti di situ,
                 mereka punya ide genial buat bikin usaha kuliner dengan konsep
@@ -426,12 +426,12 @@
               <p
                 class="text-base font-inter text-neutral-600 font-medium leading-relaxed"
               >
-                Senin - Minggu: 07.00 - 16.00 WITA
+                Senin - Jumat: 07.00 - 16.00 WIB
               </p>
               <p
                 class="text-base font-inter text-neutral-600 font-medium leading-relaxed"
               >
-                Selasa: Tutup
+                Sabtu-Minggu : Tutup
               </p>
             </div>
           </div>
@@ -449,7 +449,7 @@
           >
             <div class="h-fit">
               <h1 class="text-xl text-emerald-900 font-bold">
-                Lokasi TriHita
+                Lokasi Dapur Marani
                 <span
                   aria-label="pin location"
                   class="inline-block text-center"
@@ -578,7 +578,7 @@
           id="title"
           class="text-center text-2xl capitalize text-teal-700 font-bold"
         >
-          Menu TriHita
+          Menu Dapur Marani
         </h1>
         <div
           id="card"
@@ -1375,7 +1375,7 @@
         id="paragraph"
         class="text-center text-sm text-gray-500 font-medium leading-relaxed"
       >
-        &copy; 2024 TriHita Vegan
+        &copy; 2024 Dapur Marani
       </p>
     </footer>
     <!-- Footer -->
