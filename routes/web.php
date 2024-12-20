@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+
 use App\Http\Controllers\PesanSaranController;
+use App\Http\Controllers\SejarahSingkatController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -10,7 +12,12 @@ Route::get('/', function () {
 
 Route::get('/homepage', function () {
     return view('index');
+
 });
+
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -21,6 +28,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('pesan_saran', PesanSaranController::class)->only(['index', 'store','edit','destroy','update']);
+
+    Route::resource('sejarahsingkats', SejarahSingkatController::class);
 });
 
 require __DIR__.'/auth.php';
