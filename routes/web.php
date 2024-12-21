@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\HeroSectionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('artikel', ArtikelController::class)->only(['index', 'store','edit','destroy','update','create']);
+
+
+Route::resource('hero-sections', HeroSectionController::class);
 
 require __DIR__.'/auth.php';
 
