@@ -1,24 +1,24 @@
 <?php
-
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PesanSaranController;
+use App\Http\Controllers\FrozenFoodController;
 
-Route::resource('menu', MenuController::class);
+Route::resource('frozen_foods', FrozenFoodController::class);
+
+Route::resource('menus', MenuController::class);
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Menggabungkan kedua route yang bertentangan
 Route::get('/about', function () {
     return view('about');
 });
 
 Route::get('/menus', [MenuController::class, 'index'])->name('menus.index');
 
-// Menghapus route yang bertentangan dan menjaga route homepage
 Route::get('/homepage', function () {
     return view('index');
 });

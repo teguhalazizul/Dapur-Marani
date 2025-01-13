@@ -4,87 +4,99 @@ namespace App\Http\Controllers;
 
 use App\Models\Menu;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MenuController extends Controller
 {
     public function index()
     {
-        // Menampilkan daftar menu
         $menus = Menu::all();
-
-        return view('menu.index', compact('menus'));
+        return view('menus.index', compact('menus'));
     }
 
     public function create()
     {
-        // Menampilkan form tambah menu
-        return view('menu.create');
+        return view('menus.create');
     }
 
     public function store(Request $request)
     {
-        // Validasi input
-        $request->validate([
-            'nama' => 'required',
-            'deskripsi' => 'required',
-            'harga' => 'required|numeric',
-            'gambar' => 'required|image|mimes:jpg,jpeg,png,gif',
-        ]);
+        try {
+            $validated = $request->validate([
+                'name' => 'required|string|max:255',
+                'description' => 'required|string',
+                'price' => 'required|numeric|min:0',
+                'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            ], [
+                'name.required' => 'Nama menu harus diisi.',
+                'description.required' => 'Deskripsi menu harus diisi.',
+                'price.required' => 'Harga menu harus diisi.',
+                'price.numeric' => 'Harga harus berupa angka.',
+                'image.image' => 'File harus berupa gambar.',
+            ]);
 
-        // Menyimpan gambar
-        $gambarPath = $request->file('gambar')->store('images', 'public');
+            $path = $request->hasFile('image')
+                ? $request->file('image')->store('images', 'public')
+                : null;
 
-        // Menyimpan data menu
-        Menu::create([
-            'nama' => $request->nama,
-            'deskripsi' => $request->deskripsi,
-            'harga' => $request->harga,
-            'gambar' => $gambarPath,  // Simpan path gambar
-        ]);
+            Menu::create(array_merge($validated, ['image' => $path]));
 
-        return redirect()->route('menu.index')->with('success', 'Menu berhasil ditambahkan');
-    }
-
-    public function edit($id)
-    {
-        // Menampilkan form edit menu
-        $menu = Menu::findOrFail($id);
-        return view('menu.edit', compact('menu'));
-    }
-
-    public function update(Request $request, $id)
-    {
-        $request->validate([
-            'nama' => 'required',
-            'gambar' => 'nullable|image|mimes:jpg,jpeg,png,gif',
-            'deskripsi' => 'required',
-            'harga' => 'required|numeric',
-        ]);
-
-        $menu = Menu::findOrFail($id);
-        $menu->nama = $request->nama;
-        $menu->deskripsi = $request->deskripsi;
-        $menu->harga = $request->harga;
-
-        if ($request->hasFile('gambar')) {
-            $gambarPath = $request->file('gambar')->store('blade/images', 'public');
-            $menu->gambar = $gambarPath;
+            return redirect()->route('menus.index')->with('success', 'Menu berhasil dibuat.');
+        } catch (\Exception $e) {
+            return back()->withErrors(['error' => 'Terjadi kesalahan saat membuat menu: ' . $e->getMessage()]);
         }
-
-        $menu->save();
-
-        return redirect()->route('menu.index')->with('success', 'Menu updated successfully');
     }
 
-
-    public function destroy($id)
+    public function edit(Menu $menu)
     {
-        // Menghapus menu
-        $menu = Menu::findOrFail($id);
-        $menu->delete();
+        return view('menus.edit', compact('menu'));
+    }
 
-        return redirect()->route('menu.index')->with('success', 'Menu berhasil dihapus');
+    public function update(Request $request, Menu $menu)
+    {
+        try {
+            $validated = $request->validate([
+                'name' => 'required|string|max:255',
+                'description' => 'required|string',
+                'price' => 'required|numeric|min:0',
+                'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            ], [
+                'name.required' => 'Nama menu harus diisi.',
+                'description.required' => 'Deskripsi menu harus diisi.',
+                'price.required' => 'Harga menu harus diisi.',
+                'price.numeric' => 'Harga harus berupa angka.',
+                'image.image' => 'File harus berupa gambar.',
+            ]);
+
+            $path = $menu->image;
+
+            if ($request->hasFile('image')) {
+                if ($menu->image && Storage::exists('public/' . $menu->image)) {
+                    Storage::delete('public/' . $menu->image);
+                }
+                $path = $request->file('image')->store('images', 'public');
+            }
+
+            $menu->update(array_merge($validated, ['image' => $path]));
+
+            return redirect()->route('menus.index')->with('success', 'Menu berhasil diperbarui.');
+        } catch (\Exception $e) {
+            return back()->withErrors(['error' => 'Terjadi kesalahan saat memperbarui menu: ' . $e->getMessage()]);
+        }
+    }
+
+    public function destroy(Menu $menu)
+    {
+        try {
+            if ($menu->image && Storage::exists('public/' . $menu->image)) {
+                Storage::delete('public/' . $menu->image);
+            }
+
+            $menu->delete();
+
+            return redirect()->route('menus.index')->with('success', 'Menu berhasil dihapus.');
+        } catch (\Exception $e) {
+            return back()->withErrors(['error' => 'Terjadi kesalahan saat menghapus menu: ' . $e->getMessage()]);
+        }
     }
 }
-
-// lalu tambahkan route nya ke web.php
