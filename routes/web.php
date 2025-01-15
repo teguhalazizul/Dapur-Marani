@@ -5,6 +5,10 @@ use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HeroSectionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+
+use App\Http\Controllers\PesanSaranController;
+use App\Http\Controllers\SejarahSingkatController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,3 +32,12 @@ Route::resource('hero-sections', HeroSectionController::class);
 Route::resource('footers', FooterController::class);
 require __DIR__.'/auth.php';
 
+
+Route::get('/homepage', function () {
+    return view('index');
+
+});
+
+Route::resource('pesan_saran', PesanSaranController::class)->only(['index', 'store','edit','destroy','update']);
+
+Route::resource('sejarahsingkats', SejarahSingkatController::class);
