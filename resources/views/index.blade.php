@@ -54,8 +54,8 @@
 
             <div class="flex items-center gap-4">
               <div class="hidden md:flex md:gap-4" id="btn-cta">
-                <a class="btn-cta" href="https://wa.me/081337369380">
-                  Pesan sekarang
+                <a class="btn-cta" href="{{ route('login') }}">
+                  Login
                 </a>
               </div>
 
@@ -152,16 +152,17 @@
     </header>
 
     <!-- hero section -->
-   @include('profile.herosection')
+   @include('homepage.herosection')
     <!-- about -->
-    @include('profile.about')
+    @include('homepage.about')
     <!-- SLIDER CARD HIGHLIGHT  -->
-   @include('profile.slidecard')
+   @include('homepage.slidecard')
+   @include('homepage.artikel')
     <!-- Contact Us -->
-    @include('profile.ContactUs')
+    @include('homepage.ContactUs')
     <!-- Contact Us -->
     <!-- Footer -->
-    @include('profile.footer')
+    @include('homepage.footer')
     <!-- Footer -->
     <!-- <script src="script/script_scrollreveal.min.js"></script> -->
     <script src="https://unpkg.com/scrollreveal"></script>

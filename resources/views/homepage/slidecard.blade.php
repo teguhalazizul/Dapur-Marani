@@ -90,7 +90,7 @@
               </div>
             </div>
           </div>
-          <div class="rounded-xl shadow-lg w-full">
+          <!-- <div class="rounded-xl shadow-lg w-full">
             <div class="p-5 flex flex-col gap-3">
               <div class="rounded-xl overflow-hidden shadow-lg w-15">
                 <img
@@ -300,11 +300,12 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <!-- Card 1-->
+
         <!-- Card 2-->
-        <div
+        <!-- <div
           class="flex justify-between items-center gap-3 card-stop animate-cardSlider transition-all duration-300 ease-linear"
         >
           <div class="rounded-xl shadow-lg w-full">
@@ -587,7 +588,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- Card 2-->
       </div>
       <div class="text-center p-2" id="btn-transform">

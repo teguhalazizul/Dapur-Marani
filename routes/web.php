@@ -5,10 +5,13 @@ use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HeroSectionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfileController;
+
 
 use App\Http\Controllers\PesanSaranController;
 use App\Http\Controllers\SejarahSingkatController;
+use App\Models\Artikel;
+use App\Models\Footer;
+use App\Models\HeroSection;
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,9 +36,18 @@ Route::resource('footers', FooterController::class);
 require __DIR__.'/auth.php';
 
 
-Route::get('/homepage', function () {
-    return view('index');
+Route::match(['GET', 'POST'], '/homepage', function (Illuminate\Http\Request $request) {
+    $footers = Footer::all();
+    $heroSections = HeroSection::all();
+    $artikel = Artikel::all();
 
+    if ($request->isMethod('post')) {
+        // Logika untuk menangani data POST
+        $data = $request->all();
+        // Lakukan sesuatu dengan data yang dikirim, seperti menyimpannya ke database.
+    }
+
+    return view('index', compact('footers', 'heroSections', 'artikel'));
 });
 
 Route::resource('pesan_saran', PesanSaranController::class)->only(['index', 'store','edit','destroy','update']);

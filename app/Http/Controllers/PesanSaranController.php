@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artikel;
+use App\Models\Footer;
+use App\Models\HeroSection;
 use Illuminate\View\View;
 use App\Models\PesanSaran;
 use Illuminate\Http\Request;
@@ -32,19 +35,31 @@ class PesanSaranController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //validasi data yang di input oleh pengguna
-        $validated = $request->validate([
-            'nama' => 'required|string|max:255', // Nama harus diisi dan tidak lebih dari 255 karakter
-            'email' => 'required|email|max:255', // Email harus diisi dan valid serta tidak lebih dari 255 karakter
-            'pesan' => 'required|string', // Pesan harus diisi
-        ]);
-        $request->user()->pesanSaran()->create($validated);
+{
+    // Validasi data yang diinput oleh pengguna
+    $validated = $request->validate([
+        'nama' => 'required|string|max:255', // Nama harus diisi dan tidak lebih dari 255 karakter
+        'email' => 'required|email|max:255', // Email harus diisi, valid, dan tidak lebih dari 255 karakter
+        'pesan' => 'required|string', // Pesan harus diisi
+    ]);
 
+    // Menyimpan data ke database melalui relasi user
+    $request->user()->pesanSaran()->create($validated);
 
-        //redorect kembali ke halaman form dan menampilkan pesan sukses
-        return redirect ()->route('pesan_saran.index')->with('succes','Pesan Saran berhasil di kirim');
-    }
+    // Mengambil data yang diperlukan untuk ditampilkan di view
+    $footers = Footer::all();
+    $heroSections = HeroSection::all();
+    $artikel = Artikel::all();
+
+    // Mengembalikan view 'index' dengan pesan sukses dan data yang diperlukan
+    return view('index', [
+        'footers' => $footers,
+        'heroSections' => $heroSections,
+        'artikel' => $artikel,
+        'success' => 'Pesan Saran berhasil dikirim', // Pesan sukses
+    ]);
+}
+
 
     /**
      * Display the specified resource.
