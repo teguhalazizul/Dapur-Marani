@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
-
+use App\Http\Controllers\TentangkamiController;
 use App\Http\Controllers\PesanSaranController;
 use App\Http\Controllers\SejarahSingkatController;
 
@@ -15,6 +15,10 @@ Route::get('/homepage', function () {
 
 });
 
+Route::get('/web', function () {
+    return view('login');
+
+});
 
 
 
@@ -30,6 +34,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('pesan_saran', PesanSaranController::class)->only(['index', 'store','edit','destroy','update']);
 
     Route::resource('sejarahsingkats', SejarahSingkatController::class);
+    Route::resource('tentangkami', tentangkamiController::class);
+    
 });
 
 require __DIR__.'/auth.php';
