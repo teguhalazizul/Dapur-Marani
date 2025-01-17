@@ -169,12 +169,12 @@ Deskripsi Langkah- langkah:
 ### 2.2.3 Admin Input Artikel
 ![Screenshot 2025-01-16 164122](https://github.com/user-attachments/assets/d2cc5885-eefa-4e16-a315-f0c8251e455a)
 <br><br>
-Sistem menampilkan halaman input artikel dan admin menginputkan tanggal, judul, ketegori, status, artikel dan mengunggah file .
+Sistem menampilkan halaman input artikel dan admin menginputkan tanggal, judul, ketegori, status, artikel dan mengunggah file.
 <br><br>
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan input artikel berupa form dengan kolom  tanggal, judul, ketegori, status, artikel dan mengunggah file .
+1. Sistem akan menampilkan tampilan input artikel berupa form dengan kolom  tanggal, judul, ketegori, status, artikel dan mengunggah file.
 2. Admin dapat melihat, mengedit, atau menghapus artikel di tabel daftar artikel.
-3. Setiap perubahan (tambah, edit, atau hapus) akan langsung diperbarui di database
+3. Setiap perubahan (tambah, edit, atau hapus) akan langsung diperbarui di database.
 4. Jika sudah disimpan sistem akan menampilkan peringatan sukses maupun error.
 
 ### 2.2.4 Admin Input About us
@@ -190,7 +190,7 @@ Deskripsi Langkah- langkah:
 1. Admin dapat mengklik tombol untuk menambah footer baru dan mengisi form yang berisi kolom judul, deskripsi, URL WhatsApp, dan URL Instagram.
 2. Setelah mengisi form, admin dapat menyimpan, mengedit, dan menghapus footer yang baru ditambahkan. Sistem akan memvalidasi dan menyimpannya ke dalam database.
 3. Setiap perubahan (tambah, edit, atau hapus) akan langsung diperbarui di database.
-4. Jika sudah disimpan sistem akan menampilkan peringatan sukses maupun error
+4. Jika sudah disimpan sistem akan menampilkan peringatan sukses maupun error.
 
 ### 2.2.6 Admin Mengelola Pesan Saran
 ![Screenshot 2025-01-16 164415](https://github.com/user-attachments/assets/3c1f9d83-2357-460b-9d2b-bbe3703e4144)
@@ -202,7 +202,7 @@ Deskripsi Langkah- langkah:
 2. Setelah pesan dan saran dikirim, sistem akan memvalidasi input yang diberikan. Jika valid, sistem akan menyimpan data ke dalam database.
 3. Admin dapat mengakses halaman untuk mengedit dan menghapus pesan saran yang sudah ada. 
 4. Sistem akan menampilkan form edit dengan data yang sudah ada berdasarkan ID.
-5. Setelah setiap tindakan (tambah, edit, hapus), sistem akan menampilkan  peringatan sukses maupun error
+5. Setelah setiap tindakan (tambah, edit, hapus), sistem akan menampilkan  peringatan sukses maupun error.
 
 ### 2.2.7 Admin Input Hero Section
 ![Screenshot 2025-01-16 165704](https://github.com/user-attachments/assets/d0717832-7dfe-497e-8038-123a8c6f22ab)
@@ -213,7 +213,7 @@ Deskripsi Langkah- langkah:
 1. Sistem menampilkan form dengan kolom seperti tagline, headline, deskripsi, dan gambar.
 2. Setelah mengisi form, admin dapat menyimpan, mengedit, dan menghapus hero section yang baru ditambahkan. Sistem akan memvalidasi dan menyimpannya ke dalam database.
 3. Setiap perubahan (tambah, edit, atau hapus) akan langsung diperbarui di database.
-4. Jika sudah disimpan sistem akan menampilkan peringatan sukses maupun error
+4. Jika sudah disimpan sistem akan menampilkan peringatan sukses maupun error.
 
 ### 2.2.8 Pengguna mengunjungi website
 ![Screenshot 2025-01-16 164448](https://github.com/user-attachments/assets/9969e1c7-8d12-4aff-97fc-0109413c2181)
@@ -221,8 +221,8 @@ Deskripsi Langkah- langkah:
 Pengguna mengunjungi website dan melihat informasi yang ada pada website serta dapat memberi komentar berupa pesan dan saran pada website.
 <br><br>
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan halaman-halaman konten yang ada pada website Dapur Marani
-2. Pengunjung dapat melihat informasi yang ada pada website seperti inrmasi menu dan melihat artikel profile
+1. Sistem akan menampilkan halaman-halaman konten yang ada pada website Dapur Marani.
+2. Pengunjung dapat melihat informasi yang ada pada website seperti inrmasi menu dan melihat artikel profile.
 3. Pengunjung dapat memberikan komentar pada konten tertentu, seperti menu makanan, untuk memberikan feedback atau saran yang terkait dengan produk atau pelayanan yang ada di Dapur Marani.
 
 ## 2.3 Spesifikasi Kebutuhan non Fungsional
@@ -238,12 +238,12 @@ Pengguna berinteraksi langsung dengan perangkat lunak melalui antarmuka, seperti
 
 ## 2.5 Batasan batasan
 1. Sistem tidak mendukung pembayaran online.
-2. Hanya admin yang dapat mengelola data, sedangkan pengguna biasa hanya dapat melihat informasi yang sudah tersedia
+2. Hanya admin yang dapat mengelola data, sedangkan pengguna biasa hanya dapat melihat informasi yang sudah tersedia.
 
 ## 2.6 Asumsi-asumsi
-1. Pengguna memiliki koneksi internet yang stabil
-2. Admin memiliki pengetahuan dasar tentang cara menggunakan sistem
-3. Pengguna memiliki perangkat dengan browser yang mendukung sistem
+1. Pengguna memiliki koneksi internet yang stabil.
+2. Admin memiliki pengetahuan dasar tentang cara menggunakan sistem.
+3. Pengguna memiliki perangkat dengan browser yang mendukung sistem.
 
 ## 2.7 Kebutuhan Penyeimbang
 1. Usability yaitu sistem harus mudah digunakan oleh admin dan pengguna, tanpa memerlukan pelatihan tambahan.
