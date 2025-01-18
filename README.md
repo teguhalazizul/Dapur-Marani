@@ -94,7 +94,8 @@ Sistem ini dirancang agar pengunjung dapat mengakses informasi dengan mudah dan 
 - **View Tentang Kami**: Menyediakan informasi mengenai sejarah, visi, misi, dan informasi menarik tentang Dapur Marani.
 - **View Kontak Kami**: Halaman untuk menghubungi Dapur Marani melalui email atau WhatsApp.
 - **Link ke Instagram dan WhatsApp**: Memudahkan pengunjung untuk mengakses akun Instagram dan menghubungi melalui WhatsApp.
-
+- **View Halaman Utama**: Menampilkan Halaman Utama yang berisi informasi mengenai dapur marani.
+- **Mengirim Pesan Saran**: Mengirim Pesan Saran oleh customer.
 ## Fitur Admin
 
 Fitur-fitur yang dapat diakses oleh admin untuk mengelola konten website Dapur Marani:
