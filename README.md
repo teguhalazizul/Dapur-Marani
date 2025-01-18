@@ -5,6 +5,7 @@
 </div>
 
 
+
 <br><br>
 
 <div align="center">
@@ -36,7 +37,7 @@
 <div align="center">
     <h2>PROGRAM STUDI TEKNIK INFORMATIKA</h2>
   <h2>POLITEKNIK CALTEX RIAU</h2>
-  <p>TA 2024/2025</p>
+  <h2>TA 2024/2025</h2>
 </div>
 
 <br><br>
@@ -71,6 +72,7 @@ Sistem Informasi Dapur Marani adalah aplikasi yang kami bangun untuk mendukung o
 
 
 ## 1.4 Referensi
+https://restorangaruda.com/
 
 ## 1.5 Overview
 
@@ -118,6 +120,30 @@ Sistem Dapur Marani adalah sebuah sistem informasi yang diaplikasikan pada websi
 Sistem Dapur Marani memiliki 2 aktor yaitu admin dan pengguna. Admin mempunyai fungsi mengelola data informasi dan Pengunjung bisa melihat informasi serta memberikan komentar berupa pesan dan saran pada website.
 
 ### 2.1.2 Antarmuka Pengguna
+### Halaman Admin
+
+| **Halaman**         | **Deskripsi**                                                                                                                                                                                                                                                                                                                                                   |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Dashboard Admin** <br> ![Dashboard Admin](https://github.com/user-attachments/assets/c49599f9-bb47-4b18-a994-84a63f33763b)  | Halaman ini berfungsi sebagai pusat kontrol untuk mengelola berbagai konten di website. Admin dapat mengakses dan mengelola beberapa bagian penting seperti **Menu Makanan**, **Menu Frozen Food**, **Artikel**, **Hero Section**, **Tentang Kami**, **Footer**, dan **Pesan Saran**. Terdapat informasi admin yang sedang login di bagian bawah dashboard. |
+| **Menu Makanan** <br> ![Menu Makanan](https://github.com/user-attachments/assets/c7af81d6-655b-4c4a-b66a-db40b8ebcd13)  | Admin dapat menambah, mengedit, atau menghapus daftar menu makanan. Setiap menu mencakup informasi seperti nama, deskripsi, harga, dan foto. Bagian ini memudahkan admin untuk memperbarui pilihan menu yang selalu tersedia di Dapur Marani. |
+| **Menu Frozen Food** <br> ![Menu Frozen Food](https://github.com/user-attachments/assets/f6abc8a3-56ec-447d-96e6-3ae5f2f00259)  | Admin dapat mengelola daftar frozen food. Fitur ini memungkinkan admin menambah, mengedit, atau menghapus menu frozen food yang mencakup informasi nama, deskripsi, harga, dan foto. |
+| **Hero Section** <br> ![Hero Section](https://github.com/user-attachments/assets/feaea012-82e5-41f2-9be6-977f683b1930)  | Admin dapat mengedit tampilan utama website yang meliputi tagline, headline, deskripsi, dan gambar di bagian hero. |
+| **Tentang Kami** <br> ![Tentang Kami](https://github.com/user-attachments/assets/0f7ac90c-3f71-4643-9230-5a42e7ecf2c7)  | Admin dapat memperbarui informasi tentang Dapur Marani seperti visi, misi, sejarah singkat, jam buka, dan lokasi untuk memberikan informasi yang relevan dan akurat kepada pengguna. |
+| **Footer** <br> ![Footer](https://github.com/user-attachments/assets/349f2f7d-1408-4b47-a9df-2d332b52cbc5)  | Admin dapat memperbarui informasi yang terdapat di bagian footer seperti kontak, alamat, dan tautan ke media sosial (WhatsApp dan Instagram). |
+| **Pesan Saran** <br> ![Pesan Saran](https://github.com/user-attachments/assets/3b815a0b-b79e-4612-9a50-4f820c021421)  | Admin dapat mengelola pesan dan saran dari pengguna. Di bagian ini, admin hanya dapat menghapus pesan saran yang diterima. |
+
+### Halaman Pengguna
+
+| **Halaman**         | **Deskripsi**                                                                                                                                                                                                                                                                                                                                                   |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Beranda** <br> ![beranda](https://github.com/user-attachments/assets/873f7f9a-59e6-44ec-b066-7b02bf788105)  | Halaman utama yang dilihat oleh pengguna saat mengakses website. Menampilkan informasi singkat tentang Dapur Marani, menu makanan favorit, dan promosi yang sedang berlangsung. Bagian ini bertujuan untuk memberikan kesan pertama yang menarik kepada pengunjung. |
+| **Menu Makanan** <br> ![pmenu](https://github.com/user-attachments/assets/8afd2ebc-3f81-4f6e-a695-5d18ffc71fee) | Halaman ini menampilkan daftar lengkap menu makanan yang tersedia di Dapur Marani, dilengkapi dengan nama, harga, deskripsi, dan gambar setiap menu. Pengguna dapat melihat pilihan makanan sebelum memutuskan untuk memesan. |
+| **Menu Frozen Food** <br> ![pmenu](https://github.com/user-attachments/assets/e343cfff-5122-4979-92ac-4ff27cdea9f5) | Pengguna dapat melihat pilihan menu frozen food yang tersedia. Setiap menu dilengkapi dengan informasi nama, deskripsi, harga, dan gambar. Halaman ini membantu pengguna menemukan produk yang sesuai dengan kebutuhan mereka. |
+| **Tentang Kami** <br> ![ptentang](https://github.com/user-attachments/assets/47da395a-fdcd-4cb3-96fd-892492d0ed8b) | Halaman ini menyediakan informasi tentang visi, misi, sejarah, dan lokasi Dapur Marani. Pengguna dapat memahami lebih banyak tentang latar belakang dan tujuan dari layanan yang ditawarkan. |
+| **Kontak** <br> ![pfooter](https://github.com/user-attachments/assets/538ba159-d438-4b43-88d4-18703361f09b) | Halaman ini memuat informasi kontak, seperti nomor WhatsApp dan link media sosial Dapur Marani. Memudahkan pengguna untuk menghubungi pihak Dapur Marani untuk pertanyaan atau pesanan khusus. |
+| **Pesan Saran** <br> ![ppesan](https://github.com/user-attachments/assets/1f93cfcf-a146-49d3-8c61-10285cd1e931) | Pengguna dapat mengirimkan pesan atau saran kepada admin melalui halaman ini. Tersedia form sederhana untuk memberikan masukan demi meningkatkan kualitas layanan. |
+
+
 
 ### 2.1.3 Antarmuka Perangkat Keras
 ![Screenshot 2025-01-16 163549](https://github.com/user-attachments/assets/c3eca814-7c4b-4df8-b794-51ea5eef19b7)
@@ -192,6 +218,8 @@ Tidak ada batasan memori yang ditetapkan dalam sistem, karena aplikasi ini diran
    Sistem perlu dapat diperbaiki atau disesuaikan dengan mudah jika ada masalah atau perubahan yang perlu dilakukan.
    
 ## 2.2 Spesifikasi Kebutuhan Fungsional
+
+![ERD](https://github.com/user-attachments/assets/7a3e8a21-9cb5-48d4-9ed0-d260f191671d)
 
 ### 2.2.1 Admin Login
 ![Screenshot 2025-01-16 164036](https://github.com/user-attachments/assets/88a8c9ac-57d7-4b0e-9dc6-17d2e3127bb2)
@@ -467,6 +495,8 @@ Pengguna berinteraksi langsung dengan perangkat lunak melalui antarmuka, seperti
 | **Exception Push**| Jika ada kesalahan tampilan atau masalah teknis pada website.              |
 
 ## 3.3 Struktur Detail Kebutuhan Non-Fungsional
+![usecase](https://github.com/user-attachments/assets/676de5c1-93f6-49c3-bcff-cc08a2a6605b)
+
 
 ### 3.3.1 Logika Struktur Data
 Struktur data logika pada sistem Dapur Marani terdapat struktur Database yang dijelaskan menggunakan ERD.
@@ -557,15 +587,33 @@ Berikut adalah deskripsi tabel `hero section` yang digunakan untuk mengelola dat
 | 4      | deskripsi     | text           | Menyimpan deskripsi yang memberikan detail tambahan terkait hero section.                        |
 | 5      | gambar        | varchar(255)   | Menyimpan nama file atau path gambar yang digunakan untuk visual hero section.                   |
 
+<br><br>
 # Pembagian Tugas Proposal
-Bab 1 -> Tifani
-Bab 2 -> Teguh dan Tifani
-Bab 3 -Yudha dan Tifani
+
+| **Bab**   | **Nama**               |
+|-----------|------------------------|
+| **Bab 1** | Tifani                 |
+| **Bab 2** | Teguh dan Tifani       |
+| **Bab 3** | Yudha dan Tifani       |
 
 # Pembagian Tugas Project
-Yudha -> CRUD About US, CRUD Pesan Saran, Template Login, Nyusun Halaman Homepage Template, Menampilkan Pesan Saran pada Homepage
-Tifani -> CRUD Menu, CRUD Frozen Food, Menampilkan Menu dan Frozen Foood yang di CRUD kan Pada Homepage 
-Teguh -> Buat Login, CRUD Artikel, CRUD Hero Section , CRUD Footer, Dashboard Admin, 
-Menampilkan Hero Section, About Us,  Artikel,yang sudah di CRUD kan pada Homepage
+
+| **Tugas**                                    | **Penanggung Jawab**                           |
+|----------------------------------------------|------------------------------------------------|
+| **CRUD About Us**                            | Yudha                                          |
+| **CRUD Pesan Saran**                         | Yudha                                          |
+| **Template Login**                           | Yudha                                          |
+| **Nyusun Halaman Homepage Template**         | Yudha                                          |
+| **Menampilkan Pesan Saran pada Homepage**    | Yudha                                          |
+| **CRUD Menu**                                | Tifani                                         |
+| **Menampilkan Menu yang di CRUD-kan pada Homepage** | Tifani                                    |
+| **CRUD Frozen Food**                         | Tifani                                         |
+| **Menampilkan Frozen Food yang di CRUD-kan pada Homepage** | Tifani                                    |
+| **Buat Login**                               | Teguh                                          |
+| **CRUD Artikel**                             | Teguh                                          |
+| **CRUD Hero Section**                        | Teguh                                          |
+| **CRUD Footer**                              | Teguh                                          |
+| **Dashboard Admin**                          | Teguh                                          |
+| **Menampilkan Hero Section, About Us, Artikel yang sudah di CRUD-kan pada Homepage** | Teguh |
 
 
