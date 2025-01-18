@@ -96,6 +96,7 @@ Sistem ini dirancang agar pengunjung dapat mengakses informasi dengan mudah dan 
 - **Link ke Instagram dan WhatsApp**: Memudahkan pengunjung untuk mengakses akun Instagram dan menghubungi melalui WhatsApp.
 - **View Halaman Utama**: Menampilkan Halaman Utama yang berisi informasi mengenai dapur marani.
 - **Mengirim Pesan Saran**: Mengirim Pesan Saran oleh customer.
+
 ## Fitur Admin
 
 Fitur-fitur yang dapat diakses oleh admin untuk mengelola konten website Dapur Marani:
@@ -556,7 +557,15 @@ Berikut adalah deskripsi tabel `hero section` yang digunakan untuk mengelola dat
 | 4      | deskripsi     | text           | Menyimpan deskripsi yang memberikan detail tambahan terkait hero section.                        |
 | 5      | gambar        | varchar(255)   | Menyimpan nama file atau path gambar yang digunakan untuk visual hero section.                   |
 
-# Pembagian Tugas
+# Pembagian Tugas Proposal
+Bab 1 -> Tifani
+Bab 2 -> Teguh dan Tifani
+Bab 3 -Yudha dan Tifani
 
+# Pembagian Tugas Project
+Yudha -> CRUD About US, CRUD Pesan Saran, Template Login, Nyusun Halaman Template
+Tifani -> CRUD Menu, CRUD Frozen Food
+Teguh -> Buat Login, CRUD Artikel, CRUD Hero Section , CRUD Footer, Dashboard Admin, 
+Menampilkan Hero Section, About Us, Menu, Frozen Food, Artikel, Pesan Saran, Artikel yang sudah di CRUD kan
 
 
