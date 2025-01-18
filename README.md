@@ -60,12 +60,14 @@ Sistem Informasi Dapur Marani adalah aplikasi yang kami bangun untuk mendukung o
 
 ## 1.3 Akronim, Singkatan, dan Definisi
 
-| Istilah | Definisi |
-| ------ | ------ |
-|   SRS     |    Software Requirement Specification    |
-|    Login    | Digunakan untuk mengakses aplikasi       |
-|   Software Requirement Specification     | perangkat lunak yang akan dibuat dan sebagai penyembatani komunikasi pembuat dengan pengguna       |
-|    Use Case    | situasi dimana sistem anda digunakan untuk memenuhi satu atau lebih kebutuhan pemakaian anda       |
+| **Istilah**                        | **Definisi**                                                                                                                                                     |
+|------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **SRS**                            | Software Requirement Specification, dokumen yang berisi spesifikasi kebutuhan perangkat lunak yang akan dibuat, serta sebagai alat komunikasi antara pembuat dan pengguna. |
+| **Login**                          | Digunakan untuk mengakses aplikasi, terutama bagi admin untuk masuk ke sistem Dapur Marani untuk mengelola menu, artikel, dan data lainnya.                      |
+| **Software Requirement Specification** | Dokumen yang menjelaskan perangkat lunak yang akan dikembangkan dan digunakan sebagai penyambung komunikasi antara pengembang dan pengguna.                      |
+| **Use Case**                       | Situasi di mana sistem digunakan untuk memenuhi satu atau lebih kebutuhan pengguna atau admin dalam sistem Dapur Marani.                                         |
+| **URL**                            | Uniform Resource Locator, alamat yang digunakan untuk mengakses halaman atau konten tertentu di website Dapur Marani.                                             |
+| **Admin**                          | Pengguna yang memiliki akses penuh untuk mengelola dan mengatur konten dalam sistem, seperti input menu, artikel, dan pengelolaan pesan saran.                   |
 
 
 ## 1.4 Referensi
@@ -106,27 +108,63 @@ Fitur-fitur yang dapat diakses oleh admin untuk mengelola konten website Dapur M
 - **Edit Data**: Mengubah atau menyunting informasi yang telah ada untuk memperbarui konten sesuai kebutuhan.
 
 ## 2.1 Perspektif Produk
-Sistem Dapur Marani adalah sebuah sistem informasi yang diaplikasikan pada website. Terdapat 2 jenis aktor yaitu admin dan pengguna. Pengolahan data dilakukan oleh admin pada website dan pengunjung hanya melihat informasi pada website.
+Sistem Dapur Marani adalah sebuah sistem informasi yang diaplikasikan pada website. Terdapat 2 aktor yaitu admin dan pengguna. Pengolahan data dilakukan oleh admin pada website dan pengguna hanya melihat informasi dan memeberikan komentar berupa pesan dan saran pada website.
 
 ### 2.1.1 Antarmuka Sistem
 ![Screenshot 2025-01-16 163759](https://github.com/user-attachments/assets/f5561155-0a97-417c-b5a3-8424c172a90d)
+<br><br>
+Sistem Dapur Marani memiliki 2 aktor yaitu admin dan pengguna. Admin mempunyai fungsi mengelola data informasi dan Pengunjung bisa melihat informasi serta memberikan komentar berupa pesan dan saran pada website.
 
 ### 2.1.2 Antarmuka Pengguna
 
-### 2.1.2 Antarmuka Perangkat Keras
+### 2.1.3 Antarmuka Perangkat Keras
 ![Screenshot 2025-01-16 163549](https://github.com/user-attachments/assets/c3eca814-7c4b-4df8-b794-51ea5eef19b7)
+<br><br>
 Antarmuka perangkat keras yang digunakan untuk mengoperasikan Perangkat Lunak Sistem Dapur Marani antara lain PC maupun Laptop Untuk menjalankan Aplikasi ini.
 
 Sistem Informasi Dapur Marani adalah aplikasi yang kami bangun untuk mendukung operasional dan promosi Dapur Marani, sebuah kantin yang berlokasi di lingkungan kantor. Sistem ini bertujuan untuk mempermudah karyawan dalam mengakses informasi mengenai menu yang tersedia, harga, serta proses pemesanan makanan secara digital. Selain itu, sistem ini juga diharapkan dapat meningkatkan jangkauan promosi Dapur Marani yang selama ini hanya dilakukan melalui WhatsApp story dan pengunjung yang datang langsung ke kantin.
 
 ### 2.1.4 Antarmuka Perangkat lunak
+
+Berikut adalah beberapa antarmuka perangkat lunak dalam aplikasi Dapur Marani:
+
+1. **Halaman Login Admin**
+   - Admin melakukan login dengan memasukkan username, email dan password untuk mengakses dashboard admin.
+
+2. **Halaman Input Menu**
+   - Admin dapat menambah, mengedit, atau menghapus menu makanan dan frozen food.
+   - Input yang tersedia: Judul, Deskripsi, Harga, Unggah Gambar.
+
+3. **Halaman Input Artikel**
+   - Admin dapat mengelola artikel yang ditampilkan di website.
+   - Input yang tersedia: Tanggal, Judul, Kategori, Status, Artikel, Unggah File.
+
+4. **Halaman Input About Us**
+   - Admin dapat mengelola informasi tentang Dapur Marani, termasuk sejarah, visi, misi, jam buka, dan lokasi.
+   - Input yang tersedia: Judul, Deskripsi, Jam Buka, Lokasi, Visi dan Misi, Sejarah Singkat, Unggah File.
+
+5. **Halaman Input Hero Section**
+   - Admin dapat menambah, mengedit, atau menghapus hero section yang ditampilkan di homepage.
+   - Input yang tersedia: Tagline, Headline, Deskripsi, Gambar.
+
+6. **Halaman Input Footer**
+   - Admin dapat mengelola footer website.
+   - Input yang tersedia: Judul, Deskripsi, URL WhatsApp, URL Instagram.
+
+7. **Halaman Daftar Pesan dan Saran**
+   - Admin dapat mengakses, mengedit, dan menghapus pesan atau saran yang dikirim oleh pengguna.
+   - Input yang tersedia: Nama, Email, Pesan.
+     
 ### 2.1.5 Antarmuka Komunikasi
-Antarmuka komunikasi yang digunakan untuk mengoperasikan Perangkat Lunak Sistem Dapur Marani seperti PC/Laptop maupun Wifi/Jaringan.
+
+Antarmuka komunikasi yang digunakan untuk mengoperasikan Perangkat Lunak Sistem Dapur Marani melibatkan perangkat seperti PC atau laptop yang terhubung melalui jaringan Wi-Fi atau koneksi internet. Sistem ini memanfaatkan protokol komunikasi standar untuk memungkinkan interaksi antara pengguna dan aplikasi berbasis web.
 
 ### 2.1.6 Batasan Memory
-Tidak Ada
+
+Tidak ada batasan memori yang ditetapkan dalam sistem, karena aplikasi ini dirancang untuk berfungsi dengan baik pada perangkat dengan kapasitas memori yang standar dan dapat menyesuaikan dengan kebutuhan penggunaan.
 
 ### 2.1.7 Operasi Operasi
+
 | No | Operasi | Fungsi |
 |----|---------|--------|
 | 1  | Login   | Digunakan untuk mengakses aplikasi |
@@ -140,6 +178,17 @@ Tidak Ada
 
 ### 2.1.8 Kebutuhan adaptasi
 
+1. **Kompatibilitas**  
+   Sistem harus dapat berjalan dengan baik di berbagai perangkat, seperti komputer maupun ponsel.
+2. **Aksesibilitas**  
+   Sistem harus mudah digunakan oleh semua orang, termasuk mereka yang memiliki kebutuhan khusus.
+3. **Kinerja**  
+   Sistem harus tetap lancar meskipun ada banyak pengguna atau data yang diproses.
+4. **Pembaruan**  
+   Sistem harus mudah diperbarui atau ditingkatkan jika dibutuhkan di masa depan.
+5. **Perawatan**  
+   Sistem perlu dapat diperbaiki atau disesuaikan dengan mudah jika ada masalah atau perubahan yang perlu dilakukan.
+   
 ## 2.2 Spesifikasi Kebutuhan Fungsional
 
 ### 2.2.1 Admin Login
@@ -148,12 +197,13 @@ Tidak Ada
 Admin melakukan login terlebih dahulu sebelum masuk ke tampilan home admin, apabila gagal login akan muncul pesan alert error login.
 <br><br>
 Deskripsi Langkah-Langkah
-1. Admin mengakses halaman form edit profil dengan kolom nama, email, dan password.
-2. Admin mengubah data dan sistem memvalidasi input (nama tidak kosong, email valid, password memenuhi aturan keamanan).
+1. Admin melakukan login dengan username, eamail dan password.
+2. Sistem melakukan validasi login.
 3. Jika validasi berhasil, perubahan disimpan ke database.
 4. Sistem menampilkan pesan sukses atau error sesuai hasil penyimpanan.
 5. Admin wajib memasukkan password untuk konfirmasi sebelum menyimpan perubahan atau menghapus akun.
-
+   
+Xref: Bagian 2.2.1, Admin Login
 
 ### 2.2.2 Admin Input Menu (Makanan dan Frozen Food)
 ![Screenshot 2025-01-16 164056](https://github.com/user-attachments/assets/4414f352-2861-4fe6-b5f0-25d256e22fc4)
@@ -166,6 +216,8 @@ Deskripsi Langkah- langkah:
 3. Setiap perubahan (tambah, edit, atau hapus) akan langsung diperbarui di database.
 4. Jika sudah disimpan sistem akan menampilkan peringatan sukses maupun error.
 
+Xref: Bagian 2.2.2, Admin Input Menu (Makanan dan Frozen Food)
+
 ### 2.2.3 Admin Input Artikel
 ![Screenshot 2025-01-16 164122](https://github.com/user-attachments/assets/d2cc5885-eefa-4e16-a315-f0c8251e455a)
 <br><br>
@@ -177,9 +229,20 @@ Deskripsi Langkah- langkah:
 3. Setiap perubahan (tambah, edit, atau hapus) akan langsung diperbarui di database.
 4. Jika sudah disimpan sistem akan menampilkan peringatan sukses maupun error.
 
+Xref: Bagian 2.2.3, Admin Input Artikel
+
 ### 2.2.4 Admin Input About us
 ![Screenshot 2025-01-16 164143](https://github.com/user-attachments/assets/70e44681-3d4f-42b3-b91a-47eadb19fdfa)
 <br><br>
+Sistem menampilkan halaman input about us dan admin menginputkan judul, deskripsi, jam buka, lokasi, visi dan mis, sejarah singkat, dan mengunggah file.
+<br><br>
+Deskripsi Langkah- langkah:
+1. Sistem akan menampilkan tampilan input artikel berupa form dengan kolom   judul, deskripsi, jam buka, lokasi, visi dan mis, sejarah singkat, dan mengunggah file.
+2. Admin dapat melihat, mengedit, atau menghapus artikel di tabel daftar artikel.
+3. Setiap perubahan (tambah, edit, atau hapus) akan langsung diperbarui di database.
+4. Jika sudah disimpan sistem akan menampilkan peringatan sukses maupun error.
+   
+Xref: Bagian 2.2.4, Admin Input About Us
 
 ### 2.2.5 Admin Input Footer
 ![Screenshot 2025-01-16 164354](https://github.com/user-attachments/assets/d2de54b3-0689-422e-8d00-144d47feeb2a)
@@ -191,6 +254,8 @@ Deskripsi Langkah- langkah:
 2. Setelah mengisi form, admin dapat menyimpan, mengedit, dan menghapus footer yang baru ditambahkan. Sistem akan memvalidasi dan menyimpannya ke dalam database.
 3. Setiap perubahan (tambah, edit, atau hapus) akan langsung diperbarui di database.
 4. Jika sudah disimpan sistem akan menampilkan peringatan sukses maupun error.
+
+Xref: Bagian 2.2.5, Admin Footer
 
 ### 2.2.6 Admin Mengelola Pesan Saran
 ![Screenshot 2025-01-16 164415](https://github.com/user-attachments/assets/3c1f9d83-2357-460b-9d2b-bbe3703e4144)
@@ -204,6 +269,8 @@ Deskripsi Langkah- langkah:
 4. Sistem akan menampilkan form edit dengan data yang sudah ada berdasarkan ID.
 5. Setelah setiap tindakan (tambah, edit, hapus), sistem akan menampilkan  peringatan sukses maupun error.
 
+Xref: Bagian 2.2.6, Admin Input Pesan Saran
+
 ### 2.2.7 Admin Input Hero Section
 ![Screenshot 2025-01-16 165704](https://github.com/user-attachments/assets/d0717832-7dfe-497e-8038-123a8c6f22ab)
 <br><br>
@@ -215,6 +282,8 @@ Deskripsi Langkah- langkah:
 3. Setiap perubahan (tambah, edit, atau hapus) akan langsung diperbarui di database.
 4. Jika sudah disimpan sistem akan menampilkan peringatan sukses maupun error.
 
+Xref: Bagian 2.2.7, Admin Input Hero Section
+
 ### 2.2.8 Pengguna mengunjungi website
 ![Screenshot 2025-01-16 164448](https://github.com/user-attachments/assets/9969e1c7-8d12-4aff-97fc-0109413c2181)
 <br><br>
@@ -224,6 +293,8 @@ Deskripsi Langkah- langkah:
 1. Sistem akan menampilkan halaman-halaman konten yang ada pada website Dapur Marani.
 2. Pengunjung dapat melihat informasi yang ada pada website seperti inrmasi menu dan melihat artikel profile.
 3. Pengunjung dapat memberikan komentar pada konten tertentu, seperti menu makanan, untuk memberikan feedback atau saran yang terkait dengan produk atau pelayanan yang ada di Dapur Marani.
+
+Xref: Bagian 2.2.8, Pengguna Mengunjungi Website
 
 ## 2.3 Spesifikasi Kebutuhan non Fungsional
 Tabel kebutuhan non-fungsional
@@ -250,4 +321,242 @@ Pengguna berinteraksi langsung dengan perangkat lunak melalui antarmuka, seperti
 2. Memastikan kecepatan loading halaman website tetap cepat meskipun ada banyak pengunjung atau banyak informasi yang ditampilkan di website.
 3. Desain website yang user-friendly, dengan navigasi yang mudah dipahami dan tombol yang jelas, sehingga pengunjung tidak kesulitan mencari informasi
 4. Menambahkan fitur seperti pesan dan saran pada menu atau artikel, agar pengunjung dapat memberikan feedback atau pendapat mengenai produk yang mereka coba.
+<br><br>
+
+# BAB III Requirement Specification
+
+## 3.1 Persyaratan Antarmuka Eksternal
+
+1. **Akses Tanpa Login**  
+   Pengguna dapat mengakses website Dapur Marani tanpa perlu login. Website menampilkan berbagai konten yang dapat diakses oleh semua pengunjung, seperti daftar menu makanan, artikel, dan informasi lainnya.
+
+2. **Interaksi Pengguna**  
+   Pengguna dapat memberikan komentar berupa pesan dan saran pada konten yang ada di website, seperti menu makanan atau artikel. Pengguna dapat mengisi kolom nama, email, dan pesan untuk mengirimkan saran atau feedback.
+
+3. **Pengelolaan Konten (Admin)**  
+   Admin memiliki akses untuk login ke dalam sistem dan mengelola konten website. Admin dapat menambah, mengedit, atau menghapus menu, artikel, dan informasi lainnya. Semua perubahan yang dilakukan oleh admin akan langsung diperbarui di database.
+
+4. **Validasi dan Penyimpanan Data**  
+   Data yang dikirim oleh pengunjung melalui form pesan dan saran akan divalidasi oleh sistem dan disimpan ke dalam database. Admin akan dapat mengelola data ini melalui sistem backend.
+   
+## 3.2 Functional Requirement
+### 3.2.1 Login Admin
+
+| **Nama Fungsi**   | Admin Login                                                                                           |
+|-------------------|------------------------------------------------------------------------------------------------------|
+| **Xref**          | Bagian 2.2.1, Admin Login                                                                              |
+| **Trigger**       | Admin Membuka Website Sistem Informasi Parenting                                                      |
+| **Precondition**  | Halaman login                                                                                         |
+| **Basic Path**    | 1. Admin melakukan login dengan username, email, dan password.                                         |
+|                   | 2. Sistem melakukan validasi login.                                                                    |
+|                   | 3. Jika validasi berhasil, admin akan diarahkan ke halaman home admin.                                 |
+|                   | 4. Jika login gagal, sistem akan menampilkan peringatan error login.                                   |
+| **Alternative**    | Tidak Ada                                                                                             |
+| **Post Condition**| Admin dapat login dan mengakses website sistem informasi parenting                                    |
+| **Exception Push**| Username dan password salah                                                                            |
+
+### 3.2.2 Admin Input Menu (Makanan dan Frozen Food)
+
+| **Nama Fungsi**   | Admin Input Menu (Makanan dan Frozen Food)                                                            |
+|-------------------|------------------------------------------------------------------------------------------------------|
+| **Xref**          | Bagian 2.2.2, Admin Input Menu (Makanan dan Frozen Food)                                               |
+| **Trigger**       | Admin Mengakses Halaman Input Menu                                                                     |
+| **Precondition**  | Halaman input menu dengan kolom judul, deskripsi, harga, dan unggah file.                             |
+| **Basic Path**    | 1. Sistem menampilkan tampilan menu berupa kolom judul, deskripsi, harga, dan unggah file.             |
+|                   | 2. Admin dapat melihat, menambahkan, mengedit, atau menghapus menu yang ada.                           |
+|                   | 3. Setiap perubahan (tambah, edit, atau hapus) langsung diperbarui di database.                        |
+|                   | 4. Setelah disimpan, sistem menampilkan pesan sukses atau error sesuai hasil penyimpanan.              |
+| **Alternative**    | Tidak Ada                                                                                             |
+| **Post Condition**| Menu yang ditambahkan, diubah, atau dihapus akan langsung diperbarui di database.                     |
+| **Exception Push**| Error saat penyimpanan data atau jika file unggahan gagal.                                            |
+
+### 3.2.3 Admin Input Artikel
+
+| **Nama Fungsi**   | Admin Input Artikel                                                                |
+|-------------------|-----------------------------------------------------------------------------------|
+| **Xref**          | Bagian 2.2.3, Admin Input Artikel                                                  |
+| **Trigger**       | Admin Mengakses Halaman Input Artikel                                             |
+| **Precondition**  | Halaman input artikel dengan kolom tanggal, judul, kategori, status, artikel, dan unggah file. |
+| **Basic Path**    | 1. Sistem menampilkan tampilan input artikel berupa form dengan kolom yang sesuai. |
+|                   | 2. Admin dapat melihat, mengedit, atau menghapus artikel di tabel daftar artikel. |
+|                   | 3. Setiap perubahan (tambah, edit, atau hapus) langsung diperbarui di database.    |
+|                   | 4. Setelah disimpan, sistem menampilkan pesan sukses atau error sesuai hasil penyimpanan. |
+| **Alternative**    | Tidak Ada                                                                         |
+| **Post Condition**| Artikel yang ditambahkan, diubah, atau dihapus akan langsung diperbarui di database. |
+| **Exception Push**| Error saat penyimpanan data atau jika file unggahan gagal.                        |
+
+### 3.2.4 Admin Input About us
+
+| **Nama Fungsi**   | Admin Input About Us                                                            |
+|-------------------|---------------------------------------------------------------------------------|
+| **Xref**          | Bagian 2.2.4, Admin Input About Us                                              |
+| **Trigger**       | Admin Mengakses Halaman Input About Us                                          |
+| **Precondition**  | Halaman input About Us dengan kolom judul, deskripsi, jam buka, lokasi, visi, misi, sejarah singkat, dan unggah file. |
+| **Basic Path**    | 1. Sistem menampilkan tampilan input About Us berupa form dengan kolom yang sesuai. |
+|                   | 2. Admin dapat melihat, mengedit, atau menghapus data About Us di tabel daftar About Us. |
+|                   | 3. Setiap perubahan (tambah, edit, atau hapus) langsung diperbarui di database.  |
+|                   | 4. Setelah disimpan, sistem menampilkan pesan sukses atau error sesuai hasil penyimpanan. |
+| **Alternative**    | Tidak Ada                                                                       |
+| **Post Condition**| Data About Us yang ditambahkan, diubah, atau dihapus akan langsung diperbarui di database. |
+| **Exception Push**| Error saat penyimpanan data atau jika file unggahan gagal.                      |
+
+### 3.2.5 Admin Input Footer
+
+| **Nama Fungsi**   | Admin Input Footer                                                          |
+|-------------------|-----------------------------------------------------------------------------|
+| **Xref**          | Bagian 2.2.5, Admin Input Footer                                            |
+| **Trigger**       | Admin Mengakses Halaman Daftar Footer                                        |
+| **Precondition**  | Halaman daftar footer yang menampilkan semua footer yang sudah ada di dalam sistem. |
+| **Basic Path**    | 1. Admin mengklik tombol untuk menambah footer baru.                        |
+|                   | 2. Admin mengisi form dengan kolom judul, deskripsi, URL WhatsApp, dan URL Instagram. |
+|                   | 3. Setelah mengisi form, admin dapat menyimpan, mengedit, atau menghapus footer. |
+|                   | 4. Setiap perubahan (tambah, edit, atau hapus) langsung diperbarui di database. |
+|                   | 5. Setelah disimpan, sistem menampilkan pesan sukses atau error sesuai hasil penyimpanan. |
+| **Alternative**    | Tidak Ada                                                                   |
+| **Post Condition**| Footer baru ditambahkan, diubah, atau dihapus langsung diperbarui di database. |
+| **Exception Push**| Error saat penyimpanan data atau jika URL tidak valid.                       |
+
+### 3.2.6 Admin Mengelola Pesan Saran
+
+| **Nama Fungsi**   | Admin Mengelola Pesan Saran                                                |
+|-------------------|-----------------------------------------------------------------------------|
+| **Xref**          | Bagian 2.2.6, Admin Mengelola Pesan Saran                                   |
+| **Trigger**       | Admin Mengakses Halaman Daftar Pesan dan Saran yang Telah Diterima          |
+| **Precondition**  | Halaman daftar pesan dan saran yang telah diterima yang ditampilkan dalam sistem. |
+| **Basic Path**    | 1. Pengguna mengakses form untuk mengirim pesan dan saran.                  |
+|                   | 2. Pengguna mengisi kolom nama, email, dan pesan, kemudian mengirimkannya.  |
+|                   | 3. Setelah pesan dikirim, sistem memvalidasi input.                         |
+|                   | 4. Jika valid, sistem menyimpan pesan ke dalam database.                    |
+|                   | 5. Admin mengakses halaman untuk mengedit dan menghapus pesan saran yang ada. |
+|                   | 6. Sistem menampilkan form edit dengan data berdasarkan ID.                |
+|                   | 7. Setelah setiap tindakan (tambah, edit, hapus), sistem menampilkan pesan sukses atau error. |
+| **Alternative**    | Tidak Ada                                                                   |
+| **Post Condition**| Pesan dan saran yang baru ditambahkan, diedit, atau dihapus akan diperbarui di database. |
+| **Exception Push**| Error saat pengisian form atau jika data tidak valid.                       |
+
+### 3.2.7 Admin Input Hero Section
+
+| **Nama Fungsi**   | Admin Input Hero Section                                                  |
+|-------------------|---------------------------------------------------------------------------|
+| **Xref**          | Bagian 2.2.7, Admin Input Hero Section                                    |
+| **Trigger**       | Admin Mengakses Halaman Daftar Hero Section yang Telah Tersedia           |
+| **Precondition**  | Halaman daftar hero section yang telah tersedia, dengan opsi untuk menambah, mengedit, atau menghapus. |
+| **Basic Path**    | 1. Sistem menampilkan form dengan kolom tagline, headline, deskripsi, dan gambar. |
+|                   | 2. Admin mengisi form dengan data yang relevan.                           |
+|                   | 3. Setelah mengisi form, admin dapat menyimpan, mengedit, atau menghapus hero section yang baru ditambahkan. |
+|                   | 4. Sistem memvalidasi data dan menyimpannya ke dalam database.            |
+|                   | 5. Setiap perubahan (tambah, edit, atau hapus) langsung diperbarui di database. |
+|                   | 6. Sistem menampilkan peringatan sukses atau error setelah proses selesai. |
+| **Alternative**    | Tidak Ada                                                                  |
+| **Post Condition**| Hero section yang baru ditambahkan, diedit, atau dihapus akan diperbarui di database. |
+| **Exception Push**| Error saat pengisian form atau jika data tidak valid.                      |
+
+### 3.2.8 Pengguna mengunjungi website
+
+| **Nama Fungsi**   | Pengguna Mengunjungi Website                                               |
+|-------------------|---------------------------------------------------------------------------|
+| **Xref**          | Bagian 2.2.8, Pengguna Mengunjungi Website                                 |
+| **Trigger**       | Pengguna Mengakses Website Dapur Marani                                    |
+| **Precondition**  | Website Dapur Marani dapat diakses dan berfungsi dengan baik.              |
+| **Basic Path**    | 1. Sistem menampilkan halaman-halaman konten yang ada pada website Dapur Marani. |
+|                   | 2. Pengunjung dapat melihat informasi yang ada pada website seperti informasi menu dan artikel profil. |
+|                   | 3. Pengunjung dapat memberikan komentar pada konten tertentu, seperti menu makanan, untuk memberikan feedback atau saran terkait produk atau pelayanan yang ada di Dapur Marani. |
+| **Alternative**    | Tidak Ada                                                                  |
+| **Post Condition**| Pengguna dapat melihat konten di website dan memberikan komentar atau saran. |
+| **Exception Push**| Jika ada kesalahan tampilan atau masalah teknis pada website.              |
+
+## 3.3 Struktur Detail Kebutuhan Non-Fungsional
+
+### 3.3.1 Logika Struktur Data
+Struktur data logika pada sistem Dapur Marani terdapat struktur Database yang dijelaskan menggunakan ERD.
+
+### Tabel Admin
+Berikut adalah deskripsi tabel `admin` yang digunakan untuk mengelola data admin pada sistem.
+| **No** | **Data Item**   | **Tipe Data**  | **Deskripsi**                                                                                                         |
+|--------|-----------------|----------------|---------------------------------------------------------------------------------------------------------------------|
+| 1      | **Id_Admin**     | int            | Auto-increment untuk menyimpan ID unik setiap admin, digunakan sebagai primary key untuk identifikasi.               |
+| 2      | **username**     | varchar(255)   | Menyimpan nama pengguna (username) admin yang digunakan untuk login ke sistem.                                       |
+| 3      | **password**     | varchar(255)   | Menyimpan kata sandi (password) admin yang telah di-hash untuk autentikasi saat login.                               |
+| 4      | **level**        | varchar(255)   | Menyimpan peran admin, misalnya "admin utama", atau perbedaan akses antara admin dan pengunjung saat login.          |
+| 5      | **created_at**   | timestamp      | Mencatat waktu saat data admin pertama kali dibuat (otomatis diatur oleh sistem).                                    |
+| 6      | **updated_at**   | timestamp      | Mencatat waktu saat data admin terakhir kali diperbarui (otomatis diatur oleh sistem).                               |
+  
+### Tabel Menu (Makanan dan Frozen Food)
+Berikut adalah deskripsi tabel `menu` untuk makanan dan frozeen food yang digunakan untuk mengelola data menu pada sistem.
+| **No** | **Data Item**   | **Tipe Data**    | **Deskripsi**                                                                 |
+|--------|-----------------|------------------|-------------------------------------------------------------------------------|
+| 1      | id              | bigint           | Auto-increment untuk menyimpan ID unik setiap item menu, digunakan sebagai primary key. |
+| 2      | name            | varchar(255)     | Menyimpan nama item menu.                                                     |
+| 3      | description     | text             | Menyimpan deskripsi detail tentang item menu.                                 |
+| 4      | price           | decimal(10,2)    | Menyimpan harga item menu dengan format angka desimal.                        |
+| 5      | image           | varchar(255)     | Menyimpan nama file atau path gambar yang terkait dengan item menu (opsional).|
+| 6      | created_at      | timestamp        | Mencatat waktu saat item menu dibuat (otomatis diatur oleh sistem).           |
+| 7      | updated_at      | timestamp        | Mencatat waktu saat item menu terakhir kali diperbarui (otomatis diatur oleh sistem). |
+
+
+### Tabel Artikel
+Berikut adalah deskripsi tabel `artikel` yang digunakan untuk mengelola artikel pada sistem.
+| **No** | **Data Item** | **Tipe Data** | **Deskripsi**                                                                 |
+|--------|---------------|---------------|-------------------------------------------------------------------------------|
+| 1      | id            | int           | Auto-increment untuk menyimpan ID unik setiap artikel, digunakan sebagai primary key. |
+| 2      | judul         | varchar(255)  | Menyimpan judul artikel.                                                      |
+| 3      | tanggal       | date          | Menyimpan tanggal artikel dibuat atau diterbitkan.                            |
+| 4      | kategori      | varchar(255)  | Menyimpan kategori artikel untuk pengelompokan konten.                        |
+| 5      | status        | varchar(255)  | Menyimpan status artikel, seperti "Draft" atau "Published."                   |
+| 6      | artikel       | varchar(255)  | Menyimpan isi atau ringkasan artikel.                                         |
+| 7      | gambar        | text          | Menyimpan path atau nama file gambar yang terkait dengan artikel.             |
+
+
+### Tabel About Us
+Berikut adalah deskripsi tabel `about us` yang digunakan untuk mengelola about us pada sistem.
+| **No** | **Data Item**       | **Tipe Data**  | **Deskripsi**                                                                     |
+|--------|---------------------|----------------|-----------------------------------------------------------------------------------|
+| 1      | id                  | bigint         | Auto-increment untuk menyimpan ID unik setiap informasi umum, digunakan sebagai primary key. |
+| 2      | judul               | varchar(255)   | Menyimpan judul informasi umum.                                                  |
+| 3      | deskripsi           | text           | Menyimpan deskripsi detail terkait informasi umum.                               |
+| 4      | jam_buka            | varchar(255)   | Menyimpan jam operasional.                                                       |
+| 5      | lokasi              | varchar(255)   | Menyimpan lokasi atau alamat.                                                    |
+| 6      | visi                | text           | Menyimpan visi organisasi atau bisnis.                                           |
+| 7      | misi                | text           | Menyimpan misi organisasi atau bisnis.                                           |
+| 8      | sejarah_singkat     | text           | Menyimpan sejarah singkat tentang organisasi atau bisnis.                        |
+| 9      | gambar              | varchar(255)   | Menyimpan nama file atau path gambar yang terkait dengan informasi umum.          |
+| 10     | created_at          | timestamp      | Mencatat waktu saat data informasi umum dibuat (otomatis diatur oleh sistem).     |
+| 11     | updated_at          | timestamp      | Mencatat waktu saat data informasi umum terakhir diperbarui (otomatis diatur oleh sistem). |
+
+
+### Tabel Footer
+Berikut adalah deskripsi tabel `footer` yang digunakan untuk mengelola footer pada sistem.
+| **No** | **Data Item**    | **Tipe Data**    | **Deskripsi**                                                                         |
+|--------|------------------|------------------|-------------------------------------------------------------------------------------|
+| 1      | id               | bigint           | Auto-increment untuk menyimpan ID unik setiap footer, digunakan sebagai primary key. |
+| 2      | judul            | varchar(255)     | Menyimpan judul untuk footer, biasanya berupa nama perusahaan atau slogan.           |
+| 3      | deskripsi        | text             | Menyimpan deskripsi tambahan atau informasi singkat tentang footer.                 |
+| 4      | whatsapp_url     | varchar(255)     | Menyimpan URL untuk kontak WhatsApp.                                                |
+| 5      | instagram_url    | varchar(255)     | Menyimpan URL untuk halaman Instagram.                                              |
+
+
+### Tabel Pesan Saran
+Berikut adalah deskripsi tabel `pesan saran` yang digunakan untuk mengelola data pesan saran pada sistem.
+| **No** | **Data Item**   | **Tipe Data**  | **Deskripsi**                                                                                   |
+|--------|-----------------|----------------|-------------------------------------------------------------------------------------------------|
+| 1      | **id**          | bigint         | Auto-increment untuk menyimpan ID unik setiap pesan atau saran, digunakan sebagai primary key.   |
+| 2      | **nama**        | varchar(255)   | Menyimpan nama pengguna yang memberikan pesan atau saran.                                        |
+| 3      | **email**       | varchar(255)   | Menyimpan email pengguna, bersifat opsional.                                                    |
+| 4      | **pesan**       | text           | Menyimpan isi pesan atau saran yang diberikan oleh pengguna.                                     |
+| 5      | **created_at**  | timestamp      | Mencatat waktu saat pesan atau saran dibuat (otomatis diatur oleh sistem).                      |
+| 6      | **updated_at**  | timestamp      | Mencatat waktu saat pesan atau saran terakhir kali diperbarui (otomatis diatur oleh sistem).    |
+
+### Tabel Hero Section
+Berikut adalah deskripsi tabel `hero section` yang digunakan untuk mengelola data hero section pada sistem.
+| **No** | **Data Item** | **Tipe Data**  | **Deskripsi**                                                                                     |
+|--------|---------------|----------------|-------------------------------------------------------------------------------------------------|
+| 1      | id            | bigint         | Auto-increment untuk menyimpan ID unik setiap hero section, digunakan sebagai primary key.       |
+| 2      | tagline       | varchar(255)   | Menyimpan tagline pendek yang tampil di hero section.                                            |
+| 3      | headline      | varchar(255)   | Menyimpan headline utama yang mencolok untuk menarik perhatian di hero section.                  |
+| 4      | deskripsi     | text           | Menyimpan deskripsi yang memberikan detail tambahan terkait hero section.                        |
+| 5      | gambar        | varchar(255)   | Menyimpan nama file atau path gambar yang digunakan untuk visual hero section.                   |
+
+# Pembagian Tugas
+
+
 
