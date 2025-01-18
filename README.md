@@ -132,29 +132,29 @@ Berikut adalah beberapa antarmuka perangkat lunak dalam aplikasi Dapur Marani:
 1. **Halaman Login Admin**
    - Admin melakukan login dengan memasukkan username, email dan password untuk mengakses dashboard admin.
 
-2. **Halaman Input Menu**
+2. **Halaman Input Menu (Makanan dan Frozen Food)**
    - Admin dapat menambah, mengedit, atau menghapus menu makanan dan frozen food.
    - Input yang tersedia: Judul, Deskripsi, Harga, Unggah Gambar.
 
 3. **Halaman Input Artikel**
-   - Admin dapat mengelola artikel yang ditampilkan di website.
+   - Admin dapat menambah, mengedit, atau menghapus artikel yang ditampilkan di website.
    - Input yang tersedia: Tanggal, Judul, Kategori, Status, Artikel, Unggah File.
 
 4. **Halaman Input About Us**
-   - Admin dapat mengelola informasi tentang Dapur Marani, termasuk sejarah, visi, misi, jam buka, dan lokasi.
+   - Admin dapat mengedit informasi tentang Dapur Marani, termasuk sejarah, visi, misi, jam buka, dan lokasi.
    - Input yang tersedia: Judul, Deskripsi, Jam Buka, Lokasi, Visi dan Misi, Sejarah Singkat, Unggah File.
 
 5. **Halaman Input Hero Section**
-   - Admin dapat menambah, mengedit, atau menghapus hero section yang ditampilkan di homepage.
+   - Admin dapat mengedit hero section yang ditampilkan di homepage.
    - Input yang tersedia: Tagline, Headline, Deskripsi, Gambar.
 
 6. **Halaman Input Footer**
-   - Admin dapat mengelola footer website.
+   - Admin dapat mengedit footer website.
    - Input yang tersedia: Judul, Deskripsi, URL WhatsApp, URL Instagram.
 
 7. **Halaman Daftar Pesan dan Saran**
-   - Admin dapat mengakses, mengedit, dan menghapus pesan atau saran yang dikirim oleh pengguna.
-   - Input yang tersedia: Nama, Email, Pesan.
+   - Admin dapat mengakses dan menghapus pesan atau saran yang dikirim oleh pengguna.
+   - Input yang tersedia untuk Pengunjung : Nama, Email, Pesan.
      
 ### 2.1.5 Antarmuka Komunikasi
 
