@@ -232,28 +232,28 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 2.2.3, Admin Input Artikel
 
-### 2.2.4 Admin Input About us
+### 2.2.4 Admin Edit About us
 ![Screenshot 2025-01-16 164143](https://github.com/user-attachments/assets/70e44681-3d4f-42b3-b91a-47eadb19fdfa)
 <br><br>
-Sistem menampilkan halaman input about us dan admin menginputkan judul, deskripsi, jam buka, lokasi, visi dan mis, sejarah singkat, dan mengunggah file.
+Sistem menampilkan halaman edit about us dan admin dapat mengedit judul, deskripsi, jam buka, lokasi, visi dan mis, sejarah singkat, dan mengunggah file.
 <br><br>
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan input artikel berupa form dengan kolom   judul, deskripsi, jam buka, lokasi, visi dan mis, sejarah singkat, dan mengunggah file.
-2. Admin dapat melihat, mengedit, atau menghapus artikel di tabel daftar artikel.
-3. Setiap perubahan (tambah, edit, atau hapus) akan langsung diperbarui di database.
+1. Sistem akan menampilkan tampilan artikel dan dapat di edit berupa form dengan kolom  judul, deskripsi, jam buka, lokasi, visi dan mis, sejarah singkat, dan mengunggah file.
+2. Admin dapat melihat, mengedit about us di tabel daftar about us.
+3. Setiap perubahan (edit) akan langsung diperbarui di database.
 4. Jika sudah disimpan sistem akan menampilkan peringatan sukses maupun error.
    
 Xref: Bagian 2.2.4, Admin Input About Us
 
-### 2.2.5 Admin Input Footer
+### 2.2.5 Admin Edit Footer
 ![Screenshot 2025-01-16 164354](https://github.com/user-attachments/assets/d2de54b3-0689-422e-8d00-144d47feeb2a)
 <br><br>
 Admin mengakses halaman daftar footer yang menampilkan semua footer yang sudah ada di dalam sistem.
 <br><br>
 Deskripsi Langkah- langkah:
-1. Admin dapat mengklik tombol untuk menambah footer baru dan mengisi form yang berisi kolom judul, deskripsi, URL WhatsApp, dan URL Instagram.
-2. Setelah mengisi form, admin dapat menyimpan, mengedit, dan menghapus footer yang baru ditambahkan. Sistem akan memvalidasi dan menyimpannya ke dalam database.
-3. Setiap perubahan (tambah, edit, atau hapus) akan langsung diperbarui di database.
+1. Admin dapat mengklik tombol edit footer baru dan mengisi form yang berisi kolom judul, deskripsi, URL WhatsApp, dan URL Instagram.
+2. Setelah mengedit form, admin dapat menyimpan, footer yang baru diedit. Sistem akan memvalidasi dan menyimpannya ke dalam database.
+3. Setiap perubahan (edit) akan langsung diperbarui di database.
 4. Jika sudah disimpan sistem akan menampilkan peringatan sukses maupun error.
 
 Xref: Bagian 2.2.5, Admin Footer
@@ -266,21 +266,20 @@ Sistem akan menampilkan daftar pesan dan saran yang telah diterima pada halaman 
 Deskripsi Langkah- langkah:
 1. Pengguna dapat mengakses form untuk mengirim pesan dan saran, mengisi kolom nama, email, dan pesan, kemudian mengirimkannya.
 2. Setelah pesan dan saran dikirim, sistem akan memvalidasi input yang diberikan. Jika valid, sistem akan menyimpan data ke dalam database.
-3. Admin dapat mengakses halaman untuk mengedit dan menghapus pesan saran yang sudah ada. 
-4. Sistem akan menampilkan form edit dengan data yang sudah ada berdasarkan ID.
-5. Setelah setiap tindakan (tambah, edit, hapus), sistem akan menampilkan  peringatan sukses maupun error.
+3. Admin dapat mengakses halaman menghapus pesan saran yang sudah ada. 
+4. Setelah setiap tindakan (hapus), sistem akan menampilkan  peringatan sukses maupun error.
 
 Xref: Bagian 2.2.6, Admin Input Pesan Saran
 
-### 2.2.7 Admin Input Hero Section
+### 2.2.7 Admin Edit Hero Section
 ![Screenshot 2025-01-16 165704](https://github.com/user-attachments/assets/d0717832-7dfe-497e-8038-123a8c6f22ab)
 <br><br>
-Sistem menampilkan daftar hero section yang telah tersedia, lengkap dengan opsi untuk menambah, mengedit, atau menghapus data.
+Sistem menampilkan daftar hero section yang telah tersedia, dengan opsi untuk mengedit.
 <br><br>
 Deskripsi Langkah- langkah:
 1. Sistem menampilkan form dengan kolom seperti tagline, headline, deskripsi, dan gambar.
-2. Setelah mengisi form, admin dapat menyimpan, mengedit, dan menghapus hero section yang baru ditambahkan. Sistem akan memvalidasi dan menyimpannya ke dalam database.
-3. Setiap perubahan (tambah, edit, atau hapus) akan langsung diperbarui di database.
+2. Setelah mengisi form edit, admin dapat mengedit hero section yang baru dieditkan. Sistem akan memvalidasi dan menyimpannya ke dalam database.
+3. Setiap perubahan (edit) akan langsung diperbarui di database.
 4. Jika sudah disimpan sistem akan menampilkan peringatan sukses maupun error.
 
 Xref: Bagian 2.2.7, Admin Input Hero Section
@@ -293,7 +292,7 @@ Pengguna mengunjungi website dan melihat informasi yang ada pada website serta d
 Deskripsi Langkah- langkah:
 1. Sistem akan menampilkan halaman-halaman konten yang ada pada website Dapur Marani.
 2. Pengunjung dapat melihat informasi yang ada pada website seperti inrmasi menu dan melihat artikel profile.
-3. Pengunjung dapat memberikan komentar pada konten tertentu, seperti menu makanan, untuk memberikan feedback atau saran yang terkait dengan produk atau pelayanan yang ada di Dapur Marani.
+3. Pengunjung dapat memberikan komentar, seperti menu makanan, untuk memberikan feedback atau saran yang terkait dengan produk atau pelayanan yang ada di Dapur Marani.
 
 Xref: Bagian 2.2.8, Pengguna Mengunjungi Website
 
@@ -386,9 +385,9 @@ Pengguna berinteraksi langsung dengan perangkat lunak melalui antarmuka, seperti
 | **Post Condition**| Artikel yang ditambahkan, diubah, atau dihapus akan langsung diperbarui di database. |
 | **Exception Push**| Error saat penyimpanan data atau jika file unggahan gagal.                        |
 
-### 3.2.4 Admin Input About us
+### 3.2.4 Admin Edit About us
 
-| **Nama Fungsi**   | Admin Input About Us                                                            |
+| **Nama Fungsi**   | Admin Edit About Us                                                            |
 |-------------------|---------------------------------------------------------------------------------|
 | **Xref**          | Bagian 2.2.4, Admin Input About Us                                              |
 | **Trigger**       | Admin Mengakses Halaman Input About Us                                          |
