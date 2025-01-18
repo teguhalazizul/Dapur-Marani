@@ -563,9 +563,9 @@ Bab 2 -> Teguh dan Tifani
 Bab 3 -Yudha dan Tifani
 
 # Pembagian Tugas Project
-Yudha -> CRUD About US, CRUD Pesan Saran, Template Login, Nyusun Halaman Template
-Tifani -> CRUD Menu, CRUD Frozen Food
+Yudha -> CRUD About US, CRUD Pesan Saran, Template Login, Nyusun Halaman Homepage Template, Menampilkan Pesan Saran pada Homepage
+Tifani -> CRUD Menu, CRUD Frozen Food, Menampilkan Menu dan Frozen Foood yang di CRUD kan Pada Homepage 
 Teguh -> Buat Login, CRUD Artikel, CRUD Hero Section , CRUD Footer, Dashboard Admin, 
-Menampilkan Hero Section, About Us, Menu, Frozen Food, Artikel, Pesan Saran, Artikel yang sudah di CRUD kan pada Homepage
+Menampilkan Hero Section, About Us,  Artikel,yang sudah di CRUD kan pada Homepage
 
 
