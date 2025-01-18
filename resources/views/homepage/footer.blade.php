@@ -1,3 +1,4 @@
+<section id="footer" class="">
 <footer class="bg-teal-50">
 @foreach ($footers as $footer)
       <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
@@ -41,13 +42,20 @@
               Menu
             </a>
           </li>
-
+          <li>
+            <a
+              class="text-gray-700 transition hover:text-gray-700/75"
+              href="#artikel"
+            >
+              Artikel
+            </a>
+          </li>
           <li>
             <a
               class="text-gray-700 transition hover:text-gray-700/75"
               href="#kontak"
             >
-              Kontak Kami
+              Pesan Saran
             </a>
           </li>
         </ul>
@@ -104,7 +112,8 @@
         id="paragraph"
         class="text-center text-sm text-gray-500 font-medium leading-relaxed"
       >
-        &copy; 2024 TriHita Vegan
+        &copy; 2025 {{ $footer->judul }}
       </p>
   @endforeach
     </footer>
+  </section>

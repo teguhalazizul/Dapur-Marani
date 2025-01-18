@@ -1,4 +1,4 @@
-<section class="space-y-6">
+<section class="space-y-6 ml-8"> <!-- Added ml-8 to shift content to the right -->
     <header>
         <h2 class="text-lg font-medium text-gray-900">
             {{ __('Delete Account') }}

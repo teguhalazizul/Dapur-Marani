@@ -38,7 +38,7 @@ class ArtikelController extends Controller
             'judul' => 'required|string|max:255',
             'kategori' => 'required|string|max:255',
             'status' => 'required|string|max:255',
-            'artikel' => 'required|string|max:255',
+            'artikel' => 'required|string',
             'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048'
         ], [
             'tanggal.required' => 'Tanggal harus berupa date ',
@@ -49,7 +49,7 @@ class ArtikelController extends Controller
             'judul.max' => 'Tidak boleh lebih dari 255 karakter',
             'kategori.max' => 'Tidak boleh lebih dari 255 karakter.',
             'status.max' => 'Tidak boleh lebih dari 255 karakter.',
-            'artikel.max' => 'Tidak boleh lebih dari 255 karakter.',
+            
             'gambar.image' => 'File yang diupload harus berupa gambar.',
             'gambar.mimes' => 'Format gambar harus jpg, jpeg, atau png.',
             'gambar.max' => 'Ukuran gambar maksimal 2MB.'

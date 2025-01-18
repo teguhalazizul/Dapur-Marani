@@ -1,4 +1,4 @@
-<section>
+<section class="ml-8"> <!-- Added ml-8 to shift content to the right -->
     <header>
         <h2 class="text-lg font-medium text-gray-900">
             {{ __('Profile Information') }}

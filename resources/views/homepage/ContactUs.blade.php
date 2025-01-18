@@ -114,7 +114,7 @@
 
         <p class="font-inter text-center text-sm text-gray-500">
           Tenang, kamu juga bisa kirim lewat
-          <a class="underline" href="#">WhatsApp!</a>
+          <a class="underline" href="#footer">WhatsApp!</a>
         </p>
       </form>
     </div>

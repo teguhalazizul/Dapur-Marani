@@ -14,7 +14,7 @@ class FooterController extends Controller
         return view('footers.index', compact('footers'));
     }
 
-    // Menampilkan form untuk menambahkan footer baru
+    // Menampilkan form untuk membuat footer baru
     public function create()
     {
         return view('footers.create');
@@ -23,14 +23,14 @@ class FooterController extends Controller
     // Menyimpan footer baru
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'judul' => 'required|string|max:255',
             'deskripsi' => 'required|string',
             'whatsapp_url' => 'required|url',
             'instagram_url' => 'required|url',
         ]);
 
-        Footer::create($request->all());
+        Footer::create($validated);
 
         return redirect()->route('footers.index')->with('success', 'Footer berhasil ditambahkan!');
     }
@@ -44,14 +44,14 @@ class FooterController extends Controller
     // Memperbarui footer
     public function update(Request $request, Footer $footer)
     {
-        $request->validate([
+        $validated = $request->validate([
             'judul' => 'required|string|max:255',
             'deskripsi' => 'required|string',
             'whatsapp_url' => 'required|url',
             'instagram_url' => 'required|url',
         ]);
 
-        $footer->update($request->all());
+        $footer->update($validated);
 
         return redirect()->route('footers.index')->with('success', 'Footer berhasil diperbarui!');
     }

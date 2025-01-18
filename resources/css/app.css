@@ -1,3 +1,296 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* form loginnn */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Custom Styles for the Login Form */
+.login-form {
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for form */
+.login-form:hover {
+    transform: translateY(-5px);
+}
+
+/* Form Label Styling */
+.login-form .form-label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #4a4a4a;
+}
+
+/* Form Control Styling */
+.login-form .form-control {
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Focus state of inputs */
+.login-form .form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Remember Me Checkbox Styling */
+.login-form .form-check-label {
+    font-size: 1rem;
+    color: #555;
+}
+
+.login-form .form-check-input {
+    border-radius: 5px;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Text and link styles */
+.text-primary {
+    color: #007bff;
+}
+
+.text-primary:hover {
+    text-decoration: underline;
+}
+
+/* Spacing for form fields */
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+/* Error message style */
+.text-danger {
+    font-size: 0.875rem;
+    color: #e74a3b;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .login-form {
+        padding: 30px;
+        margin: 20px;
+    }
+}
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #90EE90; /* Light Green color */ 
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #00fc00; /* Slightly darker green on hover */
+}
+
+
+
+/* reset pass */
+/* Add these styles in your stylesheet or inside <style> tags in the Blade template */
+.reset-password-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reset-password-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.reset-password-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reset-password-form .input-field {
+    margin-bottom: 15px;
+}
+
+.reset-password-form .primary-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.reset-password-form .primary-button:hover {
+    background-color: #45a049;
+}
+
+.reset-password-form .input-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.reset-password-form .input-error {
+    color: #e74c3c;
+    font-size: 0.875rem;
+}
+
+
+/* register */
+/* Add these styles in your stylesheet or inside <style> tags in the Blade template */
+.registration-container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registration-heading {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-form .input-field {
+    margin-bottom: 15px;
+}
+
+.registration-form .primary-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.registration-form .primary-button:hover {
+    background-color: #45a049;
+}
+
+.registration-form .input-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.registration-form .input-error {
+    color: #e74c3c;
+    font-size: 0.875rem;
+}
+
+.registration-form .form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.registration-form .form-footer a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.registration-form .form-footer a:hover {
+    color: #4CAF50;
+}
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #228B22; /* Hijau tua */
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #1B751B; /* Hijau tua lebih gelap */
+}
+
+
+
+/* Add hover effect to clickable sections */
+
+
+/* Animation when clicked */
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Class for the animation */
+.animate-click {
+    animation: clickAnimation 0.3s ease-in-out;
+}
+

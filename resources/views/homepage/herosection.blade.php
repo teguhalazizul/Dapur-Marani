@@ -150,12 +150,8 @@
               </p>
             </div>
             <div class="flex gap-2 items-center">
-              <a class="btn-cta" href="#"> Pesan sekarang </a>
-              <a
-                href="menu.html"
-                class="font-inter font-normal text-sm text-gray-400"
-                >Lihat menu</a
-              >
+              <a class="btn-cta" href="{{ route('menu.menu') }}"> Lihat Menu </a>
+              
             </div>
           </div>
           <!-- content left -->

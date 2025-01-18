@@ -17,34 +17,50 @@
             Tambah Artikel
         </a>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            @foreach ($artikel as $item)
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img src="{{ Storage::url($item->gambar) }}" class="w-full h-48 object-cover" alt="Gambar Artikel" />
-                    <div class="p-4">
-                        <h2 class="text-lg font-bold">{{ $item->judul }}</h2>
-                        <p class="text-gray-600 mt-2">{{ $item->tanggal }}</p>
-                        <p class="text-gray-600 mt-2">{{ $item->kategori }}</p>
-                        <p class="text-gray-600 mt-2">{{ $item->status }}</p>
-                        <p class="text-gray-600 mt-2">{!! Str::limit($item->artikel, 100) !!}</p>
-                        <div class="mt-4">
-                            <a href="{{ route('artikel.edit', $item->id) }}"
-                                class="inline-flex items-center px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                                Edit</a>
-                            <form action="{{ route('artikel.destroy', $item->id) }}" method="POST" class="inline">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit"
-                                    class="inline-flex items-center px-4 py-2 bg-red-500 text-white text-sm font-medium rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition">
-                                    <i class="fa-solid fa-trash"></i>
-                                    Delete
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
+        <div class="overflow-x-auto bg-white shadow-md rounded-lg">
+            <table class="min-w-full table-auto">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Gambar</th>
+                        <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Judul</th>
+                        <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Tanggal</th>
+                        <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Kategori</th>
+                        <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Status</th>
+                        <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Artikel</th>
+                        <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($artikel as $item)
+                        <tr class="border-b">
+                            <td class="px-4 py-2">
+                                <img src="{{ Storage::url($item->gambar) }}" class="w-16 h-16 object-cover" alt="Gambar Artikel" />
+                            </td>
+                            <td class="px-4 py-2 text-sm">{{ $item->judul }}</td>
+                            <td class="px-4 py-2 text-sm text-gray-600">{{ $item->tanggal }}</td>
+                            <td class="px-4 py-2 text-sm text-gray-600">{{ $item->kategori }}</td>
+                            <td class="px-4 py-2 text-sm text-gray-600">{{ $item->status }}</td>
+                            <td class="px-4 py-2 text-sm text-gray-600">{!! Str::limit($item->artikel, 100) !!}</td>
+                            <td class="px-4 py-2">
+                                <a href="{{ route('artikel.edit', $item->id) }}"
+                                    class="inline-flex items-center px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                    Edit
+                                </a>
+                                <form action="{{ route('artikel.destroy', $item->id) }}" method="POST" class="inline ml-2">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"
+                                        class="inline-flex items-center px-4 py-2 bg-red-500 text-white text-sm font-medium rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition">
+                                        <i class="fa-solid fa-trash"></i>
+                                        Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 </x-app-layout>
