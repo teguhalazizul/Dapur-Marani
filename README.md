@@ -401,7 +401,7 @@ Pengguna berinteraksi langsung dengan perangkat lunak melalui antarmuka, seperti
 | **Post Condition**| Data About Us yang diubah akan langsung diperbarui di database. |
 | **Exception Push**| Error saat penyimpanan data atau jika file unggahan gagal.                      |
 
-### 3.2.5 Admin Input Footer
+### 3.2.5 Admin Edit Footer
 
 | **Nama Fungsi**   | Admin Edit Footer                                                          |
 |-------------------|-----------------------------------------------------------------------------|
@@ -435,7 +435,7 @@ Pengguna berinteraksi langsung dengan perangkat lunak melalui antarmuka, seperti
 | **Post Condition**| Pesan dan saran yang dihapus akan diperbarui di database. |
 | **Exception Push**| Error saat pengisian form atau jika data tidak valid.                       |
 
-### 3.2.7 Admin Input Hero Section
+### 3.2.7 Admin Edit Hero Section
 
 | **Nama Fungsi**   | Admin Edit Hero Section                                                  |
 |-------------------|---------------------------------------------------------------------------|
@@ -566,6 +566,6 @@ Bab 3 -Yudha dan Tifani
 Yudha -> CRUD About US, CRUD Pesan Saran, Template Login, Nyusun Halaman Template
 Tifani -> CRUD Menu, CRUD Frozen Food
 Teguh -> Buat Login, CRUD Artikel, CRUD Hero Section , CRUD Footer, Dashboard Admin, 
-Menampilkan Hero Section, About Us, Menu, Frozen Food, Artikel, Pesan Saran, Artikel yang sudah di CRUD kan
+Menampilkan Hero Section, About Us, Menu, Frozen Food, Artikel, Pesan Saran, Artikel yang sudah di CRUD kan pada Homepage
 
 
