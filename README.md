@@ -389,31 +389,31 @@ Pengguna berinteraksi langsung dengan perangkat lunak melalui antarmuka, seperti
 
 | **Nama Fungsi**   | Admin Edit About Us                                                            |
 |-------------------|---------------------------------------------------------------------------------|
-| **Xref**          | Bagian 2.2.4, Admin Input About Us                                              |
-| **Trigger**       | Admin Mengakses Halaman Input About Us                                          |
-| **Precondition**  | Halaman input About Us dengan kolom judul, deskripsi, jam buka, lokasi, visi, misi, sejarah singkat, dan unggah file. |
-| **Basic Path**    | 1. Sistem menampilkan tampilan input About Us berupa form dengan kolom yang sesuai. |
-|                   | 2. Admin dapat melihat, mengedit, atau menghapus data About Us di tabel daftar About Us. |
-|                   | 3. Setiap perubahan (tambah, edit, atau hapus) langsung diperbarui di database.  |
+| **Xref**          | Bagian 2.2.4, Admin Edit About Us                                              |
+| **Trigger**       | Admin Mengakses Halaman Edit About Us                                          |
+| **Precondition**  | Halaman Edit About Us dengan kolom judul, deskripsi, jam buka, lokasi, visi, misi, sejarah singkat, dan unggah file. |
+| **Basic Path**    | 1. Sistem menampilkan tampilan Edit About Us berupa form dengan kolom yang sesuai. |
+|                   | 2. Admin dapat mengedit data About Us di tabel daftar About Us. |
+|                   | 3. Setiap perubahan (edit) langsung diperbarui di database.  |
 |                   | 4. Setelah disimpan, sistem menampilkan pesan sukses atau error sesuai hasil penyimpanan. |
 | **Alternative**    | Tidak Ada                                                                       |
-| **Post Condition**| Data About Us yang ditambahkan, diubah, atau dihapus akan langsung diperbarui di database. |
+| **Post Condition**| Data About Us yang diubah akan langsung diperbarui di database. |
 | **Exception Push**| Error saat penyimpanan data atau jika file unggahan gagal.                      |
 
 ### 3.2.5 Admin Input Footer
 
-| **Nama Fungsi**   | Admin Input Footer                                                          |
+| **Nama Fungsi**   | Admin Edit Footer                                                          |
 |-------------------|-----------------------------------------------------------------------------|
-| **Xref**          | Bagian 2.2.5, Admin Input Footer                                            |
+| **Xref**          | Bagian 2.2.5, Admin Edit Footer                                            |
 | **Trigger**       | Admin Mengakses Halaman Daftar Footer                                        |
 | **Precondition**  | Halaman daftar footer yang menampilkan semua footer yang sudah ada di dalam sistem. |
-| **Basic Path**    | 1. Admin mengklik tombol untuk menambah footer baru.                        |
-|                   | 2. Admin mengisi form dengan kolom judul, deskripsi, URL WhatsApp, dan URL Instagram. |
-|                   | 3. Setelah mengisi form, admin dapat menyimpan, mengedit, atau menghapus footer. |
-|                   | 4. Setiap perubahan (tambah, edit, atau hapus) langsung diperbarui di database. |
+| **Basic Path**    | 1. Admin mengklik tombol edit untuk edit footer yang di sediakan.                        |
+|                   | 2. Admin mengubah form edit dengan kolom judul, deskripsi, URL WhatsApp, dan URL Instagram. |
+|                   | 3. Setelah mengubah form, admin dapat menyimpan dan mengedit. |
+|                   | 4. Setiap perubahan (edit) langsung diperbarui di database. |
 |                   | 5. Setelah disimpan, sistem menampilkan pesan sukses atau error sesuai hasil penyimpanan. |
 | **Alternative**    | Tidak Ada                                                                   |
-| **Post Condition**| Footer baru ditambahkan, diubah, atau dihapus langsung diperbarui di database. |
+| **Post Condition**| Footer baru diubah langsung diperbarui di database. |
 | **Exception Push**| Error saat penyimpanan data atau jika URL tidak valid.                       |
 
 ### 3.2.6 Admin Mengelola Pesan Saran
@@ -427,28 +427,28 @@ Pengguna berinteraksi langsung dengan perangkat lunak melalui antarmuka, seperti
 |                   | 2. Pengguna mengisi kolom nama, email, dan pesan, kemudian mengirimkannya.  |
 |                   | 3. Setelah pesan dikirim, sistem memvalidasi input.                         |
 |                   | 4. Jika valid, sistem menyimpan pesan ke dalam database.                    |
-|                   | 5. Admin mengakses halaman untuk mengedit dan menghapus pesan saran yang ada. |
-|                   | 6. Sistem menampilkan form edit dengan data berdasarkan ID.                |
-|                   | 7. Setelah setiap tindakan (tambah, edit, hapus), sistem menampilkan pesan sukses atau error. |
+|                   | 5. Admin mengakses halaman untuk menghapus pesan saran yang ada. |
+|                   |               |
+|                   | 6. Setelah setiap tindakan (tambah, edit, hapus), sistem menampilkan pesan sukses atau error. |
 | **Alternative**    | Tidak Ada                                                                   |
-| **Post Condition**| Pesan dan saran yang baru ditambahkan, diedit, atau dihapus akan diperbarui di database. |
+| **Post Condition**| Pesan dan saran yang dihapus akan diperbarui di database. |
 | **Exception Push**| Error saat pengisian form atau jika data tidak valid.                       |
 
 ### 3.2.7 Admin Input Hero Section
 
-| **Nama Fungsi**   | Admin Input Hero Section                                                  |
+| **Nama Fungsi**   | Admin Edit Hero Section                                                  |
 |-------------------|---------------------------------------------------------------------------|
-| **Xref**          | Bagian 2.2.7, Admin Input Hero Section                                    |
+| **Xref**          | Bagian 2.2.7, Admin Edit Hero Section                                    |
 | **Trigger**       | Admin Mengakses Halaman Daftar Hero Section yang Telah Tersedia           |
 | **Precondition**  | Halaman daftar hero section yang telah tersedia, dengan opsi untuk menambah, mengedit, atau menghapus. |
-| **Basic Path**    | 1. Sistem menampilkan form dengan kolom tagline, headline, deskripsi, dan gambar. |
-|                   | 2. Admin mengisi form dengan data yang relevan.                           |
-|                   | 3. Setelah mengisi form, admin dapat menyimpan, mengedit, atau menghapus hero section yang baru ditambahkan. |
+| **Basic Path**    | 1. Sistem menampilkan form Edit dengan kolom tagline, headline, deskripsi, dan gambar. |
+|                   | 2. Admin mengisi form Edit dengan data yang relevan.                           |
+|                   | 3. Setelah mengisi form, admin dapat menyimpan hero section yang baru di ubah. |
 |                   | 4. Sistem memvalidasi data dan menyimpannya ke dalam database.            |
-|                   | 5. Setiap perubahan (tambah, edit, atau hapus) langsung diperbarui di database. |
+|                   | 5. Setiap perubahan (edit) langsung diperbarui di database. |
 |                   | 6. Sistem menampilkan peringatan sukses atau error setelah proses selesai. |
 | **Alternative**    | Tidak Ada                                                                  |
-| **Post Condition**| Hero section yang baru ditambahkan, diedit, atau dihapus akan diperbarui di database. |
+| **Post Condition**| Hero section yang baru diedit akan diperbarui di database. |
 | **Exception Push**| Error saat pengisian form atau jika data tidak valid.                      |
 
 ### 3.2.8 Pengguna mengunjungi website
