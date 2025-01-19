@@ -39,7 +39,7 @@
                             <td class="px-4 py-2 text-sm">{{ $pesan->suggestion }}</td>
                             <td class="px-4 py-2 text-sm">
                                 <form action="{{ route('pesan_saran.destroy', $pesan) }}" method="POST"
-                                    onsubmit="return confirm('Are you sure you want to delete this message?');">
+                                    onsubmit="return confirm('Apakah yakin ingin menghapus pesan saran ini?');">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit"

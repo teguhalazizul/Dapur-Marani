@@ -43,7 +43,7 @@
                                     <i class="fa-solid fa-pen-to-square"></i>
                                     Edit
                                 </a>
-                                <form action="{{ route('frozen_foods.destroy', $frozen_food->id) }}" method="POST" class="inline ml-2">
+                                <form action="{{ route('frozen_foods.destroy', $frozen_food->id) }}" method="POST" class="inline ml-2" onsubmit="return confirm('Apakah yakin ingin menghapus Frozen Food ini?');">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit"
