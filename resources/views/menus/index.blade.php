@@ -1,24 +1,14 @@
 <x-app-layout>
     <div class="max-w-4xl mx-auto py-6">
         <h1 class="text-2xl font-bold mb-4">Daftar Menu</h1>
-        @if (session('success'))
-            <div class="bg-green-500 text-white p-3 mb-4">
-                {{ session('success') }}
-            </div>
-        @endif
 
-        @if (session('hapus'))
-            <div class="bg-red-500 text-white p-3 mb-4">
-                {{ session('hapus') }}
-            </div>
-        @endif
-
+        <!-- Tombol Tambah Menu -->
         <a href="{{ route('menus.create') }}" class="inline-block bg-blue-500 text-white px-4 py-2 rounded mb-4">
             Tambah Menu
         </a>
 
         <div class="overflow-x-auto bg-white shadow-md rounded-lg">
-            <table class="min-w-full table-auto">
+            <table id="menu-table" class="min-w-full table-auto display">
                 <thead>
                     <tr class="bg-gray-100">
                         <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Gambar</th>
@@ -29,8 +19,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($menus as $menu)
-                        <tr class="border-b">
+                    @forelse ($menus as $menu)
+                        <tr>
                             <td class="px-4 py-2">
                                 <img src="{{ Storage::url($menu->image) }}" class="w-16 h-16 object-cover" alt="Gambar Menu" />
                             </td>
@@ -40,7 +30,6 @@
                             <td class="px-4 py-2">
                                 <a href="{{ route('menus.edit', $menu->id) }}"
                                     class="inline-flex items-center px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition">
-                                    <i class="fa-solid fa-pen-to-square"></i>
                                     Edit
                                 </a>
                                 <form action="{{ route('menus.destroy', $menu->id) }}" method="POST" class="inline ml-2" onsubmit="return confirm('Apakah yakin ingin menghapus menu ini?');">
@@ -48,15 +37,29 @@
                                     @method('DELETE')
                                     <button type="submit"
                                         class="inline-flex items-center px-4 py-2 bg-red-500 text-white text-sm font-medium rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition">
-                                        <i class="fa-solid fa-trash"></i>
                                         Delete
                                     </button>
                                 </form>
                             </td>
                         </tr>
-                    @endforeach
+                    @empty
+                        <tr>
+                            <td colspan="5" class="text-center py-4 text-gray-600">Tidak ada data menu ditemukan.</td>
+                        </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>
     </div>
+
+    <!-- Tambahkan skrip DataTables -->
+    <script>
+        $(document).ready(function () {
+            $('#menu-table').DataTable({
+                language: {
+                    url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/id.json" // Gunakan bahasa Indonesia
+                }
+            });
+        });
+    </script>
 </x-app-layout>

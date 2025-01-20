@@ -1,26 +1,10 @@
 <x-app-layout>
-    <div class="max-w-2xl mx-auto p-4">
-    <h1 class="text-2xl font-bold mb-4">Daftar Pesan Saran Customer</h1>
-        <!-- <form method="POST" action="{{ route('pesan_saran.store') }}">
-            @csrf
+    <div class="max-w-6xl mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4">Daftar Pesan Saran Customer</h1>
 
-            <input type="text" name="nama" placeholder="Nama Anda" class="block w-full border-gray-300 rounded-md"
-                value="{{ old('nama') }}" />
-            <x-input-error :messages="$errors->get('nama')" class="mt-2" />
-
-            <input type="email" name="email" placeholder="Email Anda"
-                class="block w-full mt-4 border-gray-300 rounded-md" value="{{ old('email') }}" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-
-            <textarea name="pesan" placeholder="Apa yang ingin Anda sampaikan?"
-                class="block w-full mt-4 border-gray-300 rounded-md">{{ old('pesan') }}</textarea>
-            <x-input-error :messages="$errors->get('pesan')" class="mt-2" />
-
-            <x-primary-button class="mt-4">Kirim Pesan</x-primary-button>
-        </form> -->
-
+        <!-- Tabel Daftar Pesan -->
         <div class="overflow-x-auto bg-white shadow-md rounded-lg">
-            <table class="min-w-full table-auto">
+            <table id="pesan-saran-table" class="min-w-full table-auto">
                 <thead>
                     <tr class="bg-gray-100">
                         <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Nama</th>
@@ -32,7 +16,7 @@
                 </thead>
                 <tbody>
                     @foreach ($pesansaran as $pesan)
-                        <tr class="border-b">
+                        <tr class="border-b hover:bg-gray-50">
                             <td class="px-4 py-2 text-sm">{{ $pesan->nama }}</td>
                             <td class="px-4 py-2 text-sm">{{ $pesan->pesan }}</td>
                             <td class="px-4 py-2 text-sm">{{ $pesan->email }}</td>
@@ -54,4 +38,17 @@
             </table>
         </div>
     </div>
+
+    <!-- Script DataTables -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            $('#pesan-saran-table').DataTable({
+                language: {
+                    url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/id.json" // Bahasa Indonesia
+                },
+                responsive: true, // Tabel menjadi responsif
+                autoWidth: false, // Disable auto width
+            });
+        });
+    </script>
 </x-app-layout>
