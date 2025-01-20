@@ -1,12 +1,13 @@
 <x-app-layout>
     <div class="max-w-4xl mx-auto py-6">
         <h1 class="text-2xl font-bold mb-4">Daftar Artikel</h1>
+
+        <!-- Flash Messages -->
         @if (session('success'))
             <div class="bg-green-500 text-white p-3 mb-4">
                 {{ session('success') }}
             </div>
         @endif
-
         @if (session('hapus'))
             <div class="bg-red-500 text-white p-3 mb-4">
                 {{ session('hapus') }}
@@ -17,8 +18,9 @@
             Tambah Artikel
         </a>
 
+        <!-- Tabel Artikel dengan DataTables -->
         <div class="overflow-x-auto bg-white shadow-md rounded-lg">
-            <table class="min-w-full table-auto">
+            <table id="artikel-table" class="min-w-full table-auto display">
                 <thead>
                     <tr class="bg-gray-100">
                         <th class="px-4 py-2 text-left text-sm font-medium text-gray-700">Gambar</th>
@@ -63,4 +65,15 @@
             </table>
         </div>
     </div>
+
+    <!-- Tambahkan skrip DataTables -->
+    <script>
+        $(document).ready(function () {
+            $('#artikel-table').DataTable({
+                language: {
+                    url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/id.json" // Gunakan bahasa Indonesia
+                }
+            });
+        });
+    </script>
 </x-app-layout>

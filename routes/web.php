@@ -83,9 +83,11 @@ Route::get('/menu', function () {
     return view('menu',compact('footers','menus','frozenFoods')); // Mengirim data menus ke view
 })->name('menu.menu'); // Menambahkan nama route
 
-
-
-
 Route::resource('tentangkami', TentangKamiController::class)->only(['index', 'store','edit','destroy','update','create']);
 
+Route::get('/artikel/{id}', function ($id) {
+    $footers = Footer::all();
+    $artikel = App\Models\Artikel::findOrFail($id); // Ganti 'App\Models\Artikel' sesuai dengan model Anda
+    return view('detail-artikel', compact('artikel','footers')); // Mengarahkan ke view detail
+})->name('artikel.detail');
 

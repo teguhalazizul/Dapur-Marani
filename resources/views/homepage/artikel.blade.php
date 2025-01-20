@@ -5,17 +5,21 @@
         </h1>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             @foreach ($artikel as $item)
-                <div class="bg-white shadow-md rounded-lg overflow-hidden border border-black">
-                    <img src="{{ Storage::url($item->gambar) }}" class="w-full h-48 object-cover" alt="Gambar Artikel" />
-                    <div class="p-4">
-                        <h2 class="text-lg font-bold">{{ $item->judul }}</h2>
-                        <p class="text-gray-600 mt-2">{{ $item->tanggal }}</p>
-                        <p class="text-gray-600 mt-2">{{ $item->kategori }}</p>
-                        <p class="text-gray-600 mt-2">{{ $item->status }}</p>
-                        <p class="text-gray-600 mt-2">{!! Str::limit($item->artikel, 100) !!}</p>
-                        <div class="mt-4"></div>
-                    </div>
+            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-black">
+                <img src="{{ Storage::url($item->gambar) }}" class="w-full h-48 object-cover" alt="Gambar Artikel" />
+                <div class="p-4">
+                    <h2 class="text-lg font-bold">{{ $item->judul }}</h2>
+                    <p class="text-gray-600 mt-2">{{ $item->tanggal }}</p>
+                    <p class="text-gray-600 mt-2">{{ $item->kategori }}</p>
+                    <p class="text-gray-600 mt-2">{{ $item->status }}</p>
+                    <p class="text-gray-600 mt-2">{!! Str::limit($item->artikel, 100) !!}</p>
+                    <div class="mt-4"><a href="{{ route('artikel.detail', ['id' => $item->id]) }}"
+                            class="text-teal-500 hover:text-teal-700 font-semibold">
+                            Lihat Selengkapnya
+                        </a></div>
                 </div>
+            </div>
+
             @endforeach
         </div>
     </div>
