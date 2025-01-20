@@ -137,8 +137,10 @@ Sistem Dapur Marani memiliki 2 aktor yaitu admin dan pengguna. Admin mempunyai f
 | **Halaman**         | **Deskripsi**                                                                                                                                                                                                                                                                                                                                                   |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Beranda** <br> ![beranda](https://github.com/user-attachments/assets/873f7f9a-59e6-44ec-b066-7b02bf788105)  | Halaman utama yang dilihat oleh pengguna saat mengakses website. Menampilkan informasi singkat tentang Dapur Marani, menu makanan favorit, dan promosi yang sedang berlangsung. Bagian ini bertujuan untuk memberikan kesan pertama yang menarik kepada pengunjung. |
-| **Menu Makanan** <br> ![pmenu](https://github.com/user-attachments/assets/8afd2ebc-3f81-4f6e-a695-5d18ffc71fee) | Halaman ini menampilkan daftar lengkap menu makanan yang tersedia di Dapur Marani, dilengkapi dengan nama, harga, deskripsi, dan gambar setiap menu. Pengguna dapat melihat pilihan makanan sebelum memutuskan untuk memesan. |
-| **Menu Frozen Food** <br> ![pmenu](https://github.com/user-attachments/assets/e343cfff-5122-4979-92ac-4ff27cdea9f5) | Pengguna dapat melihat pilihan menu frozen food yang tersedia. Setiap menu dilengkapi dengan informasi nama, deskripsi, harga, dan gambar. Halaman ini membantu pengguna menemukan produk yang sesuai dengan kebutuhan mereka. |
+| **Menu Makanan** <br>![menu](https://github.com/user-attachments/assets/85597c71-02f3-41fe-adfc-8047f4264fe6)
+ | Halaman ini menampilkan daftar lengkap menu makanan yang tersedia di Dapur Marani, dilengkapi dengan nama, harga, deskripsi, dan gambar setiap menu. Pengguna dapat melihat pilihan makanan sebelum memutuskan untuk memesan. |
+| **Menu Frozen Food** <br>![cemilan](https://github.com/user-attachments/assets/d288c14a-8107-4eb4-b898-8e498643737c)
+ | Pengguna dapat melihat pilihan menu frozen food yang tersedia. Setiap menu dilengkapi dengan informasi nama, deskripsi, harga, dan gambar. Halaman ini membantu pengguna menemukan produk yang sesuai dengan kebutuhan mereka. |
 | **Tentang Kami** <br> ![ptentang](https://github.com/user-attachments/assets/47da395a-fdcd-4cb3-96fd-892492d0ed8b) | Halaman ini menyediakan informasi tentang visi, misi, sejarah, dan lokasi Dapur Marani. Pengguna dapat memahami lebih banyak tentang latar belakang dan tujuan dari layanan yang ditawarkan. |
 | **Kontak** <br> ![pfooter](https://github.com/user-attachments/assets/538ba159-d438-4b43-88d4-18703361f09b) | Halaman ini memuat informasi kontak, seperti nomor WhatsApp dan link media sosial Dapur Marani. Memudahkan pengguna untuk menghubungi pihak Dapur Marani untuk pertanyaan atau pesanan khusus. |
 | **Pesan Saran** <br> ![ppesan](https://github.com/user-attachments/assets/1f93cfcf-a146-49d3-8c61-10285cd1e931) | Pengguna dapat mengirimkan pesan atau saran kepada admin melalui halaman ini. Tersedia form sederhana untuk memberikan masukan demi meningkatkan kualitas layanan. |
@@ -222,7 +224,8 @@ Tidak ada batasan memori yang ditetapkan dalam sistem, karena aplikasi ini diran
 ![ERD](https://github.com/user-attachments/assets/7a3e8a21-9cb5-48d4-9ed0-d260f191671d)
 
 ### 2.2.1 Admin Login
-![Screenshot 2025-01-16 164036](https://github.com/user-attachments/assets/88a8c9ac-57d7-4b0e-9dc6-17d2e3127bb2)
+![use case admin](https://github.com/user-attachments/assets/242e9bc8-229c-45c3-b73c-a84c6d8a3ab7)
+
 <br><br>
 Admin melakukan login terlebih dahulu sebelum masuk ke tampilan home admin, apabila gagal login akan muncul pesan alert error login.
 <br><br>
